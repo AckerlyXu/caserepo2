@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+</body>
+
+<script>
+    $(function () {
+        var jsons = [
+            { "name": "jack", "age": 18, "hobby": "computer" },
+            { "name": "mike", "age": 15, "hobby": "basketball" },
+             { "name": "nancy", "age": 19, "hobby": "drawing" },
+
+         { "name": "helen", "age": 10, "hobby": "volleyball" },
+              { "name": "tank", "age": 20, "hobby": "football" }
+        ]
+
+        var $table = $("<table border='1'></table>");  //create a table elment 
+        $table.append("<tr><th>name</th><th>age</th><th>hobby</th></tr>"); // append header to the newly created table
+        $.each(jsons, function (index, ele) {  // loop through the json array, the first parameter is your json array, the second parameter is your callback function
+            //index is the index of your element in the json array, ele is the element of your json array
+          
+            $table.append("<tr><td>" + ele.name + "</td><td>" + ele.age + "</td><td>" + ele.hobby +"</td></tr>")
+        })
+        // insert the table to the body of html
+        $("body").append($table);
+    })
+</script>
+</html>

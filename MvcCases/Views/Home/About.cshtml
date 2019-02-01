@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+
+@*<embed src="@Url.Action("Pdf")#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px" id="ifa"/>*@
+<iframe src="@Url.Action("Pdf")#toolbar=0&navpanes=0&scrollbar=0" title="PDF in an i-Frame" frameborder="0" scrolling="auto" style="width:100%; height:100%;"></iframe>
+@section scripts{
+
+
+    <script type="text/javascript">
+        $(function () {
+            em = document.getElementById("ifa");
+            document.oncontextmenu = function () {
+                event.returnValue = false;
+            }
+            document.onmousedown = disableRightclick;
+          
+            function disableRightclick(evt) {
+                if (evt.button == 2) {
+                   
+                    return false;
+                }
+            }
+            //$win = document.getElementById("ifa").contentWindow;
+            //$win.onbeforeprint = function () {
+            //    $('<div style="background-color:black;position:absolute;z-index:100;height:1000px;width:500px;top:0"></div>').appendTo($(this).find("body"));
+            //}
+            //$win.onclick = function () {
+            //    alert("hello");
+            //}
+            // $win.print();
+
+
+            window.onbeforeprint = function () {
+             //   $('<div style="background-color:black;position:absolute;z-index:100;height:1000px;width:500px;top:0"></div>').appendTo($("body"))
+            }
+
+        })
+
+    </script>
+
+}
+

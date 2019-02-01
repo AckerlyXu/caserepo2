@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+ 
+    <script src="../Scripts/jquery-1.9.1.js"></script>
+</head>
+<body>
+
+
+    <div class="container">
+      
+
+            <div id="div" contenteditable="true">fddsfg fds dgdfgdsgfdsgd
+            </div>
+            <input id="input" type="text" value="12345" />
+
+     
+
+</div>
+    <script>
+        $(function () {
+           
+          $("#div").focus();
+            var html = $("#div").html();
+            if (document.execCommand) {
+
+                $("#div").html("");
+                try {
+                    document.execCommand("insertHTML", "false", html)
+                } catch (e) {
+
+                }
+                    
+
+            }
+            if ($("#div").html() == "") {
+                $("#div").html(html)
+                range = document.body.createTextRange();//Create a range (a range is a like the selection but invisible)
+                range.moveToElementText(document.getElementById("div"));//Select the entire contents of the element with the range
+                range.collapse(false);//collapse the range to the end point. false means collapse to end rather than the start
+                range.select();
+
+
+            }
+            
+        
+
+         
+         
+           
+            
+        })
+    </script>
+
+</body>
+</html>

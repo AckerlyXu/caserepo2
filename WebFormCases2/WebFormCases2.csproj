@@ -1,0 +1,1067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4AD0A0B3-91D3-41EF-B50B-F65966494D20}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebFormCases2</RootNamespace>
+    <AssemblyName>WebFormCases2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\ackerlyx\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.2\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=2.1.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.2.1.1\lib\net45\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MimeKit, Version=2.1.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.1.1\lib\net45\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.13\lib\net452\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenPop, Version=2.0.6.1120, Culture=neutral, PublicKeyToken=6bdb97f144b7efc8, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenPop.NET.2.0.6.1120\lib\net40\OpenPop.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="bootstrapexe\startAModalPopUp.aspx" />
+    <None Include="Connected Services\ServiceReference1\MyService.disco" />
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="csharpDemo\ReadMailUsingOpenPop.aspx" />
+    <Content Include="cssDemo\LayOutSpan.aspx" />
+    <Content Include="dropdownDemo\binddropdownwithjs.aspx" />
+    <Content Include="dynamicaddedControls\DynamicAddTextbox.aspx" />
+    <Content Include="fileDemo\LimitUploadSize.aspx" />
+    <Content Include="fileDemo\ReadLineInAFile.aspx" />
+    <Content Include="fileDemo\test.txt" />
+    <Content Include="fileDemo\zipuploadedImage.aspx" />
+    <Content Include="JavascriptDemo\AnimateJquery.html" />
+    <Content Include="JavascriptDemo\convertJsonToHtmlTable.html" />
+    <Content Include="JavascriptDemo\image.html" />
+    <Content Include="JqueryPlugins\JqueryDataTableGridView.aspx" />
+    <Content Include="jsonDemo\ReadJsonFile.aspx" />
+    <Content Include="officesample\DisablePrintPdf.aspx" />
+    <Content Include="officesample\WriteDataInDataTableToExcel.aspx" />
+    <Content Include="RedApple.html" />
+    <Content Include="Services\CallWebapi.aspx" />
+    <Content Include="Services\MyService.asmx" />
+    <Content Include="ViewStateDemo\second.aspx" />
+    <Content Include="ViewStateDemo\SessionIdProblem.aspx" />
+    <Content Include="ViewStateDemo\SessionTest.aspx" />
+    <Content Include="xmlDemo\generateXsltConditionally.aspx" />
+    <Content Include="xmlDemo\origin.xml" />
+    <Content Include="xmlDemo\test.xml" />
+    <Content Include="xmlDemo\trans.xslt" />
+    <Content Include="officesample\abc.pdf" />
+    <None Include="Connected Services\Auth\Auth.wsdl" />
+    <Content Include="Connected Services\Auth\WebFormCases2.Auth.GetMsgResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\Auth\WebFormCases2.Auth.LoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\Auth\Auth.disco" />
+    <None Include="Connected Services\Auth\configuration91.svcinfo" />
+    <None Include="Connected Services\Auth\configuration.svcinfo" />
+    <None Include="Connected Services\Auth\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="csharpDemo\ReadEmailExe.aspx" />
+    <Content Include="csharpDemo\SortStringUsingRownum.aspx" />
+    <Content Include="csharpDemo\TextFile1.txt" />
+    <Content Include="Default.aspx" />
+    <Content Include="DynamicData\EntityTemplates\Default.ascx" />
+    <Content Include="DynamicData\EntityTemplates\Default_Edit.ascx" />
+    <Content Include="DynamicData\EntityTemplates\Default_Insert.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Children.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Children_Insert.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DateTime.ascx" />
+    <Content Include="DynamicData\FieldTemplates\DateTime_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Decimal_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\EmailAddress.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Enumeration.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ForeignKey.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Integer_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ManyToMany.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Text.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Url.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Url_Edit.ascx" />
+    <Content Include="extraControls\BindDataAccordingToCheckbox.aspx" />
+    <Content Include="extraControls\HideModelPopupInUpdatePanel.aspx" />
+    <Content Include="extraControls\HoverToShowPopup.aspx" />
+    <Content Include="extraControls\WebUserControl1.ascx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fileDemo\ShowImagesStoredInDatabase.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GridViewDemo\OneToMany\EmployWithDepart.aspx" />
+    <Content Include="GridViewDemo\ShowEnumType.aspx" />
+    <Content Include="GridViewDemo\ShowEnumUsingDynamicControl.aspx" />
+    <Content Include="IdentityExe\ShowUsersUsingUserManager.aspx" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="images\WingtipToysBak\Thumbs.db" />
+    <Content Include="images\WingtipToys\Thumbs.db" />
+    <Content Include="JavascriptDemo\MoveCursor.html" />
+    <Content Include="JavascriptDemo\moverow.html" />
+    <Content Include="JqueryPlugins\googleAnalysis.aspx" />
+    <Content Include="jsonDemo\ParseJsonString.aspx" />
+    <Content Include="Models\MutipleContextDealWithOneToManyCauseException.aspx" />
+    <Content Include="officesample\readcsvdemo.aspx" />
+    <Content Include="officesample\ShowxlsxInBrowser.aspx" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="officesample\My.xls" />
+    <Content Include="jsonDemo\json.json" />
+    <None Include="Connected Services\ServiceReference1\MyService.wsdl" />
+    <Content Include="Connected Services\ServiceReference1\WebFormCases2.ServiceReference1.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="images\35b98efd413275984b5854789dce5529.gif" />
+    <Content Include="images\combine.png" />
+    <Content Include="images\icons\back.png" />
+    <Content Include="images\icons\blank.gif" />
+    <Content Include="images\icons\cancel.png" />
+    <Content Include="images\icons\clear.png" />
+    <Content Include="images\icons\cut.png" />
+    <Content Include="images\icons\edit_add.png" />
+    <Content Include="images\icons\edit_remove.png" />
+    <Content Include="images\icons\filesave.png" />
+    <Content Include="images\icons\filter.png" />
+    <Content Include="images\icons\help.png" />
+    <Content Include="images\icons\large_chart.png" />
+    <Content Include="images\icons\large_clipart.png" />
+    <Content Include="images\icons\large_picture.png" />
+    <Content Include="images\icons\large_shapes.png" />
+    <Content Include="images\icons\large_smartart.png" />
+    <Content Include="images\icons\lock.png" />
+    <Content Include="images\icons\man.png" />
+    <Content Include="images\icons\mini_add.png" />
+    <Content Include="images\icons\mini_edit.png" />
+    <Content Include="images\icons\mini_refresh.png" />
+    <Content Include="images\icons\more.png" />
+    <Content Include="images\icons\no.png" />
+    <Content Include="images\icons\ok.png" />
+    <Content Include="images\icons\pencil.png" />
+    <Content Include="images\icons\print.png" />
+    <Content Include="images\icons\redo.png" />
+    <Content Include="images\icons\reload.png" />
+    <Content Include="images\icons\search.png" />
+    <Content Include="images\icons\sum.png" />
+    <Content Include="images\icons\tip.png" />
+    <Content Include="images\icons\undo.png" />
+    <Content Include="images\linksOnImage.jpg" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\menu_arrows.png" />
+    <Content Include="images\messager_icons.png" />
+    <Content Include="images\pagination_icons.png" />
+    <Content Include="images\panel_tools.png" />
+    <Content Include="images\passwordbox_close.png" />
+    <Content Include="images\passwordbox_open.png" />
+    <Content Include="images\searchbox_button.png" />
+    <Content Include="images\size.png" />
+    <Content Include="images\slider_handle.png" />
+    <Content Include="images\spinner_arrows.png" />
+    <Content Include="images\tabs_icons.png" />
+    <Content Include="images\tagbox_icons.png" />
+    <Content Include="images\tree_icons.png" />
+    <Content Include="images\validatebox_warning.png" />
+    <Content Include="images\WingtipToysBak\busdouble.png" />
+    <Content Include="images\WingtipToysBak\busgreen.png" />
+    <Content Include="images\WingtipToysBak\busred.png" />
+    <Content Include="images\WingtipToys\20-12-18-02-09-21.jpg" />
+    <Content Include="images\WingtipToys\20-12-18-02-17-20.jpg" />
+    <Content Include="images\WingtipToys\admin.PNG" />
+    <Content Include="images\WingtipToys\boatbig.png" />
+    <Content Include="images\WingtipToys\boatpaper.png" />
+    <Content Include="images\WingtipToys\boatsail.png" />
+    <Content Include="images\WingtipToys\busdouble.png" />
+    <Content Include="images\WingtipToys\busgreen.png" />
+    <Content Include="images\WingtipToys\busred.png" />
+    <Content Include="images\WingtipToys\carconvert.png" />
+    <Content Include="images\WingtipToys\carearly.png" />
+    <Content Include="images\WingtipToys\carfast.png" />
+    <Content Include="images\WingtipToys\carfaster.png" />
+    <Content Include="images\WingtipToys\carracer.png" />
+    <Content Include="images\WingtipToys\planeace.png" />
+    <Content Include="images\WingtipToys\planeglider.png" />
+    <Content Include="images\WingtipToys\planepaper.png" />
+    <Content Include="images\WingtipToys\planeprop.png" />
+    <Content Include="images\WingtipToys\rocket.png" />
+    <Content Include="images\WingtipToys\truckbig.png" />
+    <Content Include="images\WingtipToys\truckearly.png" />
+    <Content Include="images\WingtipToys\truckfire.png" />
+    <Content Include="InsertOneToMany\DepartAndEmp.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Services\AdoSpressTest.asmx" />
+    <Content Include="Services\MyWebServiceClient.aspx" />
+    <Content Include="Services\TestAuth.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="sqldbexe\DatetimeconvertionInLinqToEntity.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="bootstrapexe\startAModalPopUp.aspx.cs">
+      <DependentUpon>startAModalPopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bootstrapexe\startAModalPopUp.aspx.designer.cs">
+      <DependentUpon>startAModalPopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Auth\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpDemo\ReadEmailExe.aspx.cs">
+      <DependentUpon>ReadEmailExe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpDemo\ReadEmailExe.aspx.designer.cs">
+      <DependentUpon>ReadEmailExe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpDemo\ReadMailUsingOpenPop.aspx.cs">
+      <DependentUpon>ReadMailUsingOpenPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpDemo\ReadMailUsingOpenPop.aspx.designer.cs">
+      <DependentUpon>ReadMailUsingOpenPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpDemo\SortStringUsingRownum.aspx.cs">
+      <DependentUpon>SortStringUsingRownum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpDemo\SortStringUsingRownum.aspx.designer.cs">
+      <DependentUpon>SortStringUsingRownum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cssDemo\LayOutSpan.aspx.cs">
+      <DependentUpon>LayOutSpan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cssDemo\LayOutSpan.aspx.designer.cs">
+      <DependentUpon>LayOutSpan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dropdownDemo\binddropdownwithjs.aspx.cs">
+      <DependentUpon>binddropdownwithjs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dropdownDemo\binddropdownwithjs.aspx.designer.cs">
+      <DependentUpon>binddropdownwithjs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dynamicaddedControls\DynamicAddTextbox.aspx.cs">
+      <DependentUpon>DynamicAddTextbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dynamicaddedControls\DynamicAddTextbox.aspx.designer.cs">
+      <DependentUpon>DynamicAddTextbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default.ascx.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default.ascx.designer.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Edit.ascx.cs">
+      <DependentUpon>Default_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Edit.ascx.designer.cs">
+      <DependentUpon>Default_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Insert.ascx.cs">
+      <DependentUpon>Default_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Insert.ascx.designer.cs">
+      <DependentUpon>Default_Insert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.designer.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.designer.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.designer.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.designer.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.designer.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.designer.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.designer.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.designer.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.designer.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.designer.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.designer.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany.ascx.cs">
+      <DependentUpon>ManyToMany.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany.ascx.designer.cs">
+      <DependentUpon>ManyToMany.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx.cs">
+      <DependentUpon>ManyToMany_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ManyToMany_Edit.ascx.designer.cs">
+      <DependentUpon>ManyToMany_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.designer.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.designer.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.designer.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.designer.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.cs">
+      <DependentUpon>Url_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url_Edit.ascx.designer.cs">
+      <DependentUpon>Url_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="extraControls\BindDataAccordingToCheckbox.aspx.cs">
+      <DependentUpon>BindDataAccordingToCheckbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extraControls\BindDataAccordingToCheckbox.aspx.designer.cs">
+      <DependentUpon>BindDataAccordingToCheckbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="extraControls\HideModelPopupInUpdatePanel.aspx.cs">
+      <DependentUpon>HideModelPopupInUpdatePanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extraControls\HideModelPopupInUpdatePanel.aspx.designer.cs">
+      <DependentUpon>HideModelPopupInUpdatePanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="extraControls\HoverToShowPopup.aspx.cs">
+      <DependentUpon>HoverToShowPopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extraControls\HoverToShowPopup.aspx.designer.cs">
+      <DependentUpon>HoverToShowPopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="extraControls\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extraControls\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="fileDemo\LimitUploadSize.aspx.cs">
+      <DependentUpon>LimitUploadSize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fileDemo\LimitUploadSize.aspx.designer.cs">
+      <DependentUpon>LimitUploadSize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fileDemo\ReadLineInAFile.aspx.cs">
+      <DependentUpon>ReadLineInAFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fileDemo\ReadLineInAFile.aspx.designer.cs">
+      <DependentUpon>ReadLineInAFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fileDemo\ShowImagesStoredInDatabase.aspx.cs">
+      <DependentUpon>ShowImagesStoredInDatabase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fileDemo\ShowImagesStoredInDatabase.aspx.designer.cs">
+      <DependentUpon>ShowImagesStoredInDatabase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fileDemo\zipuploadedImage.aspx.cs">
+      <DependentUpon>zipuploadedImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fileDemo\zipuploadedImage.aspx.designer.cs">
+      <DependentUpon>zipuploadedImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="GridViewDemo\OneToMany\EmployWithDepart.aspx.cs">
+      <DependentUpon>EmployWithDepart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\OneToMany\EmployWithDepart.aspx.designer.cs">
+      <DependentUpon>EmployWithDepart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewDemo\ShowEnumType.aspx.cs">
+      <DependentUpon>ShowEnumType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\ShowEnumType.aspx.designer.cs">
+      <DependentUpon>ShowEnumType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewDemo\ShowEnumUsingDynamicControl.aspx.cs">
+      <DependentUpon>ShowEnumUsingDynamicControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\ShowEnumUsingDynamicControl.aspx.designer.cs">
+      <DependentUpon>ShowEnumUsingDynamicControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IdentityExe\ShowUsersUsingUserManager.aspx.cs">
+      <DependentUpon>ShowUsersUsingUserManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IdentityExe\ShowUsersUsingUserManager.aspx.designer.cs">
+      <DependentUpon>ShowUsersUsingUserManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertOneToMany\DepartAndEmp.aspx.cs">
+      <DependentUpon>DepartAndEmp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertOneToMany\DepartAndEmp.aspx.designer.cs">
+      <DependentUpon>DepartAndEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JqueryPlugins\googleAnalysis.aspx.cs">
+      <DependentUpon>googleAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryPlugins\googleAnalysis.aspx.designer.cs">
+      <DependentUpon>googleAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JqueryPlugins\JqueryDataTableGridView.aspx.cs">
+      <DependentUpon>JqueryDataTableGridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryPlugins\JqueryDataTableGridView.aspx.designer.cs">
+      <DependentUpon>JqueryDataTableGridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jsonDemo\ParseJsonString.aspx.cs">
+      <DependentUpon>ParseJsonString.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jsonDemo\ParseJsonString.aspx.designer.cs">
+      <DependentUpon>ParseJsonString.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jsonDemo\ReadJsonFile.aspx.cs">
+      <DependentUpon>ReadJsonFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jsonDemo\ReadJsonFile.aspx.designer.cs">
+      <DependentUpon>ReadJsonFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812310519115_first.cs" />
+    <Compile Include="Migrations\201812310519115_first.Designer.cs">
+      <DependentUpon>201812310519115_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901010156341_second.cs" />
+    <Compile Include="Migrations\201901010156341_second.Designer.cs">
+      <DependentUpon>201901010156341_second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901160157311_init-servicedbcontext.cs" />
+    <Compile Include="Migrations\201901160157311_init-servicedbcontext.Designer.cs">
+      <DependentUpon>201901160157311_init-servicedbcontext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Configuration1.cs" />
+    <Compile Include="Models\DbContext1.cs" />
+    <Compile Include="Models\DepartAndEmp.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Entity1.cs" />
+    <Compile Include="Models\Identity\AppIdentityDbContext.cs" />
+    <Compile Include="Models\Identity\AppRole.cs" />
+    <Compile Include="Models\Identity\AppRoleManager.cs" />
+    <Compile Include="Models\Identity\AppUser.cs" />
+    <Compile Include="Models\Identity\AppUserManager.cs" />
+    <Compile Include="Models\MutipleContextDealWithOneToManyCauseException.aspx.cs">
+      <DependentUpon>MutipleContextDealWithOneToManyCauseException.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\MutipleContextDealWithOneToManyCauseException.aspx.designer.cs">
+      <DependentUpon>MutipleContextDealWithOneToManyCauseException.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\school\ServiceDbContext.cs" />
+    <Compile Include="Models\school\ServiceConfiguration.cs" />
+    <Compile Include="officesample\DisablePrintPdf.aspx.cs">
+      <DependentUpon>DisablePrintPdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officesample\DisablePrintPdf.aspx.designer.cs">
+      <DependentUpon>DisablePrintPdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officesample\readcsvdemo.aspx.cs">
+      <DependentUpon>readcsvdemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officesample\readcsvdemo.aspx.designer.cs">
+      <DependentUpon>readcsvdemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officesample\ShowxlsxInBrowser.aspx.cs">
+      <DependentUpon>ShowxlsxInBrowser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officesample\ShowxlsxInBrowser.aspx.designer.cs">
+      <DependentUpon>ShowxlsxInBrowser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officesample\WriteDataInDataTableToExcel.aspx.cs">
+      <DependentUpon>WriteDataInDataTableToExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officesample\WriteDataInDataTableToExcel.aspx.designer.cs">
+      <DependentUpon>WriteDataInDataTableToExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AdoSpressTest.asmx.cs">
+      <DependentUpon>AdoSpressTest.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\CallWebapi.aspx.cs">
+      <DependentUpon>CallWebapi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\CallWebapi.aspx.designer.cs">
+      <DependentUpon>CallWebapi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\MyService.asmx.cs">
+      <DependentUpon>MyService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\MyWebServiceClient.aspx.cs">
+      <DependentUpon>MyWebServiceClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\MyWebServiceClient.aspx.designer.cs">
+      <DependentUpon>MyWebServiceClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\TestAuth.aspx.cs">
+      <DependentUpon>TestAuth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\TestAuth.aspx.designer.cs">
+      <DependentUpon>TestAuth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\WriteImages.ashx.cs">
+      <DependentUpon>WriteImages.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sqldbexe\DatetimeconvertionInLinqToEntity.aspx.cs">
+      <DependentUpon>DatetimeconvertionInLinqToEntity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sqldbexe\DatetimeconvertionInLinqToEntity.aspx.designer.cs">
+      <DependentUpon>DatetimeconvertionInLinqToEntity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StartupBack.cs" />
+    <Compile Include="Utils\ControlHelper.cs" />
+    <Compile Include="Utils\EncryptDecryptUtil.cs" />
+    <Compile Include="Utils\ImageUtil.cs" />
+    <Compile Include="Utils\MyObjectDataSource.cs" />
+    <Compile Include="Utils\MySqlUtil.cs" />
+    <Compile Include="Utils\SqlHelper.cs" />
+    <Compile Include="ViewStateDemo\second.aspx.cs">
+      <DependentUpon>second.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStateDemo\second.aspx.designer.cs">
+      <DependentUpon>second.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStateDemo\SessionIdProblem.aspx.cs">
+      <DependentUpon>SessionIdProblem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStateDemo\SessionIdProblem.aspx.designer.cs">
+      <DependentUpon>SessionIdProblem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStateDemo\SessionTest.aspx.cs">
+      <DependentUpon>SessionTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStateDemo\SessionTest.aspx.designer.cs">
+      <DependentUpon>SessionTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="xmlDemo\generateXsltConditionally.aspx.cs">
+      <DependentUpon>generateXsltConditionally.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xmlDemo\generateXsltConditionally.aspx.designer.cs">
+      <DependentUpon>generateXsltConditionally.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="images\small\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Services\WriteImages.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="ts_files\aliasOfNamespace.ts" />
+    <TypeScriptCompile Include="ts_files\Importdts.ts" />
+    <TypeScriptCompile Include="ts_files\ImportMathLib.ts" />
+    <TypeScriptCompile Include="ts_files\interface_exe.ts" />
+    <TypeScriptCompile Include="ts_files\math-lib.d.ts" />
+    <TypeScriptCompile Include="ts_files\node.d.ts" />
+    <TypeScriptCompile Include="ts_files\shapes.ts" />
+    <TypeScriptCompile Include="ts_files\shapesCustomer.ts" />
+    <TypeScriptCompile Include="ts_files\StringValidator.ts" />
+    <TypeScriptCompile Include="ts_files\StringValidatorNamespace.ts" />
+    <TypeScriptCompile Include="ts_files\Teacher.ts" />
+    <TypeScriptCompile Include="ts_files\TestNamespace.ts" />
+    <TypeScriptCompile Include="ts_files\Validators.ts" />
+    <TypeScriptCompile Include="ts_files\ZipCodeValidator.ts" />
+    <TypeScriptCompile Include="ts_files\ZipCodeValidatorNamespace.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812310519115_first.resx">
+      <DependentUpon>201812310519115_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901010156341_second.resx">
+      <DependentUpon>201901010156341_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901160157311_init-servicedbcontext.resx">
+      <DependentUpon>201901160157311_init-servicedbcontext.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Auth\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53239</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53239/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

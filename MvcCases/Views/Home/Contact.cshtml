@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<div id="content"></div>
+@section scripts{
+    
+     <script>
+         $(function () {
+             $.ajax(
+                 {
+                     "url":'@Url.Action("Partial","Home", new { id="abcde"})',
+                     
+                    // "dataType": "html",
+                     "type": "GET",
+                     "success": function (data) {
+                         $("#content").html(data);
+                     }
+                 }
+             )
+         })
+     </script>
+    
+    }

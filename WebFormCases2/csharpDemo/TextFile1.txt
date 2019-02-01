@@ -1,0 +1,6 @@
+﻿Ref: Add MS 89010/17-21, Row no :8,Column name : Reference, Error message:Add MS 89010/17-21 is already in Iams 
+Ref: Add MS 89245/7, Row no :3,Column name : Languageofmaterial, Error message:LanguageOfMaterial is missing or column name is incorrect 
+Ref: Add MS 89245/7/1-6, Row no :4,Column name : Languageofmaterial, Error message:Englishs is an unknown LanguageOfMaterial term 
+Ref: Add MS 89245/7/1, Row no :5,Column name : Languageofmaterial, Error message:Arabi is an unknown LanguageOfMaterial term 
+Ref: Add MS 89245/7/2, Row no :6,Column name : Languagecodesofmaterial, Error message:ar is an unknown LanguageCodesOfMaterial term 
+Ref: Add MS 89245/7/7-15, Row no :7,Column name : Scriptcodesofmaterial, Error message:Ara is an unknown ScriptCodesOfMaterial term

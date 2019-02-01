@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+
+<Parent>
+    <Child>conent of child 1</Child>
+   <Child>conent of child 2</Child> 
+<Child>should generate </Child>
+</Parent>
