@@ -1,6 +1,9 @@
 ﻿
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -14,9 +17,44 @@ namespace WebFormCases2
 {
     public partial class About : Page
     {
+        private static string constr = ConfigurationManager.ConnectionStrings["NorthwindConnectionString3"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
           
+
+                SqlConnection con = new SqlConnection(constr);
+                using (SqlCommand com = new SqlCommand("select * from customers", con))
+                {
+                    try
+                    {
+                       
+                        con.Open();
+
+
+
+                    using ( SqlDataReader reader =com.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                Response.Write(reader.GetString(2));
+                            }
+                        }
+                    }
+                    }
+                    catch (Exception)
+                    {
+                        con.Close();
+                        con.Dispose();
+
+                        throw;
+                    }
+
+                }
+
+            
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)

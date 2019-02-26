@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/knockout-3.4.2.js"></script>
+    <script src="../Scripts/knockout.validation.min.js"></script>
+    <style>
+        .validationMessage{
+            color:red
+        }
+    </style>
+</head>
+
+            
+<body>
+
+    <form>
+
+        <div>
+           
+            <label for="homePhone">homePhone</label> <input type="text" data-bind="value: homePhone"  />
+           
+        </div>
+        <div>
+            <label for="mobilePhone"> mobilePhone</label>  <input type="text" data-bind="value: mobilePhone" />
+           
+        </div>
+        <div style="color:red" data-bind="visible: !isFirst() && ! homePhone() && !mobilePhone() ">please enter either your phone number or mobilePhone</div>
+        <input type="button" value="submit" data-bind="click:Register"  />
+    </form>
+
+</body>
+<script>
+    var ViewModel = function () {
+        var self = this;
+      
+       
+        self.mobilePhone = ko.observable()
+        
+        self.homePhone = ko.observable()
+        self.isFirst = ko.observable(true);
+        self.flag = ko.observable(false);
+        self.Register = function () {
+            self.isFirst(false);
+            //self.flag(!self.isFirst() && !self.homePhone() && !self.mobilePhone());           
+        }
+    }
+    var viewModel = new ViewModel();
+    ko.applyBindings(viewModel);
+</script>
+</html>

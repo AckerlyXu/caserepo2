@@ -64,6 +64,9 @@
     <Reference Include="EPPlus, Version=4.5.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
       <HintPath>..\packages\EPPlus.4.5.3\lib\net40\EPPlus.dll</HintPath>
     </Reference>
+    <Reference Include="Mail, Version=3.0.19029.1200, Culture=neutral, PublicKeyToken=6dc438ab78a525b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mail.dll.3.0.19029.1200\lib\net45\Mail.dll</HintPath>
+    </Reference>
     <Reference Include="MailKit, Version=2.1.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>..\packages\MailKit.2.1.1\lib\net45\MailKit.dll</HintPath>
     </Reference>
@@ -106,6 +109,20 @@
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="PayPalAdaptivePaymentsSDK, Version=2.15.117.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPalAdaptivePaymentsSDK.2.15.117\lib\net20\PayPalAdaptivePaymentsSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="PayPalCoreSDK, Version=1.7.0.0, Culture=neutral, PublicKeyToken=5b4afc1ccaef40fb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PayPalCoreSDK.1.7.0\lib\net451\PayPalCoreSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="PIUControls, Version=1.0.2626.14196, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\downloads\VS-2008-master\PIUControls.dll</HintPath>
+    </Reference>
+    <Reference Include="PIUControlsX, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\downloads\VS-2008-master\PIUControlsX.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -113,9 +130,13 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Imap4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Imap4.0.1.0\lib\net35\System.Net.Imap4.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -199,7 +220,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AjaxTookKitDemo\AjaxSliderDemo.aspx" />
+    <Content Include="AjaxTookKitDemo\ExtraContralPxu.aspx" />
+    <Content Include="bootstrapexe\BootStrapVertical.aspx" />
+    <Content Include="bootstrapexe\LayOutStart.html" />
     <Content Include="bootstrapexe\startAModalPopUp.aspx" />
+    <Content Include="csharpDemo\paypalStart.aspx" />
+    <Content Include="csharpDemo\ReadEmailWithImap4.aspx" />
+    <Content Include="csharpDemo\ReadGmailTest.aspx" />
+    <Content Include="csharpDemo\ReadGmailUsingSystemNetimap4.aspx" />
+    <Content Include="csharpDemo\RegexDemo.aspx" />
+    <Content Include="csharpDemo\sdk_functions.js" />
+    <Content Include="csharpDemo\StringDemo.aspx" />
+    <Content Include="JavascriptDemo\CopyPasteExe.html" />
+    <Content Include="JavascriptDemo\TestCommaNumbers.html" />
+    <Content Include="JqueryPlugins\GoogleMapStart.html" />
+    <Content Include="JqueryPlugins\pnotify.custom.min.css" />
+    <Content Include="JqueryPlugins\pnotify.custom.min.js" />
+    <Content Include="JqueryPlugins\PnotifyJsExe.aspx" />
+    <Content Include="LinqEntityDemo\SumDecimal.aspx" />
+    <Content Include="Services\CallRemoteServerWithDownloadStringWebClient.aspx" />
+    <Content Include="xmlDemo\employees.xml" />
+    <Content Include="xmlDemo\SerializeHtml.aspx" />
+    <Content Include="xmlDemo\XmlElementMethodDes.aspx" />
     <None Include="Connected Services\ServiceReference1\MyService.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
@@ -207,30 +250,53 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="crossPageDemo\FormViewToGridView.aspx" />
+    <Content Include="crossPageDemo\openedGridview.aspx" />
     <Content Include="csharpDemo\ReadMailUsingOpenPop.aspx" />
+    <Content Include="cssDemo\FullScreenBackgroundImage.aspx" />
     <Content Include="cssDemo\LayOutSpan.aspx" />
     <Content Include="dropdownDemo\binddropdownwithjs.aspx" />
     <Content Include="dynamicaddedControls\DynamicAddTextbox.aspx" />
+    <Content Include="extraControls\ChartStart.aspx" />
     <Content Include="fileDemo\LimitUploadSize.aspx" />
     <Content Include="fileDemo\ReadLineInAFile.aspx" />
     <Content Include="fileDemo\test.txt" />
     <Content Include="fileDemo\zipuploadedImage.aspx" />
+    <Content Include="GridViewDemo\DownLoadFileExe.aspx" />
+    <Content Include="GridViewDemo\DynamicAddRow.aspx" />
+    <Content Include="GridViewDemo\Pdfs.aspx" />
     <Content Include="JavascriptDemo\AnimateJquery.html" />
     <Content Include="JavascriptDemo\convertJsonToHtmlTable.html" />
     <Content Include="JavascriptDemo\image.html" />
+    <Content Include="JavascriptDemo\knockoutValidation.html" />
+    <Content Include="JavascriptDemo\TestRegex.html" />
+    <Content Include="JqueryPlugins\JqueryAutocompleteExe.aspx" />
     <Content Include="JqueryPlugins\JqueryDataTableGridView.aspx" />
+    <Content Include="JqueryPlugins\TwoDatePickers.aspx" />
     <Content Include="jsonDemo\ReadJsonFile.aspx" />
+    <Content Include="LinqEntityDemo\DealWithNullInLinq.aspx" />
+    <Content Include="LinqEntityDemo\ParallelForEachStart.aspx" />
+    <Content Include="officesample\clientReceivePdf.html" />
     <Content Include="officesample\DisablePrintPdf.aspx" />
+    <Content Include="officesample\MyPdf.aspx" />
     <Content Include="officesample\WriteDataInDataTableToExcel.aspx" />
+    <Content Include="officesample\WritePdfToClient.aspx" />
     <Content Include="RedApple.html" />
+    <Content Include="Scripts\knockout-3.4.2.debug.js" />
+    <Content Include="Scripts\knockout-3.4.2.js" />
+    <Content Include="Scripts\knockout.validation.js" />
+    <Content Include="Scripts\knockout.validation.min.js" />
     <Content Include="Services\CallWebapi.aspx" />
     <Content Include="Services\MyService.asmx" />
+    <Content Include="sqldbexe\SqlServerIsolation.aspx" />
     <Content Include="ViewStateDemo\second.aspx" />
     <Content Include="ViewStateDemo\SessionIdProblem.aspx" />
     <Content Include="ViewStateDemo\SessionTest.aspx" />
+    <Content Include="xmlDemo\access.xml" />
     <Content Include="xmlDemo\generateXsltConditionally.aspx" />
     <Content Include="xmlDemo\origin.xml" />
     <Content Include="xmlDemo\test.xml" />
+    <Content Include="xmlDemo\TestXmlSerialize.aspx" />
     <Content Include="xmlDemo\trans.xslt" />
     <Content Include="officesample\abc.pdf" />
     <None Include="Connected Services\Auth\Auth.wsdl" />
@@ -439,6 +505,20 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjaxTookKitDemo\AjaxSliderDemo.aspx.cs">
+      <DependentUpon>AjaxSliderDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxTookKitDemo\AjaxSliderDemo.aspx.designer.cs">
+      <DependentUpon>AjaxSliderDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxTookKitDemo\ExtraContralPxu.aspx.cs">
+      <DependentUpon>ExtraContralPxu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxTookKitDemo\ExtraContralPxu.aspx.designer.cs">
+      <DependentUpon>ExtraContralPxu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -448,6 +528,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="bootstrapexe\BootStrapVertical.aspx.cs">
+      <DependentUpon>BootStrapVertical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bootstrapexe\BootStrapVertical.aspx.designer.cs">
+      <DependentUpon>BootStrapVertical.aspx</DependentUpon>
+    </Compile>
     <Compile Include="bootstrapexe\startAModalPopUp.aspx.cs">
       <DependentUpon>startAModalPopUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -472,12 +559,54 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="crossPageDemo\FormViewToGridView.aspx.cs">
+      <DependentUpon>FormViewToGridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crossPageDemo\FormViewToGridView.aspx.designer.cs">
+      <DependentUpon>FormViewToGridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crossPageDemo\openedGridview.aspx.cs">
+      <DependentUpon>openedGridview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crossPageDemo\openedGridview.aspx.designer.cs">
+      <DependentUpon>openedGridview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpDemo\paypalStart.aspx.cs">
+      <DependentUpon>paypalStart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpDemo\paypalStart.aspx.designer.cs">
+      <DependentUpon>paypalStart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="csharpDemo\ReadEmailExe.aspx.cs">
       <DependentUpon>ReadEmailExe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="csharpDemo\ReadEmailExe.aspx.designer.cs">
       <DependentUpon>ReadEmailExe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpDemo\ReadEmailWithImap4.aspx.cs">
+      <DependentUpon>ReadEmailWithImap4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpDemo\ReadEmailWithImap4.aspx.designer.cs">
+      <DependentUpon>ReadEmailWithImap4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpDemo\ReadGmailTest.aspx.cs">
+      <DependentUpon>ReadGmailTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpDemo\ReadGmailTest.aspx.designer.cs">
+      <DependentUpon>ReadGmailTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpDemo\ReadGmailUsingSystemNetimap4.aspx.cs">
+      <DependentUpon>ReadGmailUsingSystemNetimap4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpDemo\ReadGmailUsingSystemNetimap4.aspx.designer.cs">
+      <DependentUpon>ReadGmailUsingSystemNetimap4.aspx</DependentUpon>
     </Compile>
     <Compile Include="csharpDemo\ReadMailUsingOpenPop.aspx.cs">
       <DependentUpon>ReadMailUsingOpenPop.aspx</DependentUpon>
@@ -486,12 +615,33 @@
     <Compile Include="csharpDemo\ReadMailUsingOpenPop.aspx.designer.cs">
       <DependentUpon>ReadMailUsingOpenPop.aspx</DependentUpon>
     </Compile>
+    <Compile Include="csharpDemo\RegexDemo.aspx.cs">
+      <DependentUpon>RegexDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpDemo\RegexDemo.aspx.designer.cs">
+      <DependentUpon>RegexDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="csharpDemo\SortStringUsingRownum.aspx.cs">
       <DependentUpon>SortStringUsingRownum.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="csharpDemo\SortStringUsingRownum.aspx.designer.cs">
       <DependentUpon>SortStringUsingRownum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpDemo\StringDemo.aspx.cs">
+      <DependentUpon>StringDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpDemo\StringDemo.aspx.designer.cs">
+      <DependentUpon>StringDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cssDemo\FullScreenBackgroundImage.aspx.cs">
+      <DependentUpon>FullScreenBackgroundImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cssDemo\FullScreenBackgroundImage.aspx.designer.cs">
+      <DependentUpon>FullScreenBackgroundImage.aspx</DependentUpon>
     </Compile>
     <Compile Include="cssDemo\LayOutSpan.aspx.cs">
       <DependentUpon>LayOutSpan.aspx</DependentUpon>
@@ -689,6 +839,13 @@
     <Compile Include="extraControls\BindDataAccordingToCheckbox.aspx.designer.cs">
       <DependentUpon>BindDataAccordingToCheckbox.aspx</DependentUpon>
     </Compile>
+    <Compile Include="extraControls\ChartStart.aspx.cs">
+      <DependentUpon>ChartStart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extraControls\ChartStart.aspx.designer.cs">
+      <DependentUpon>ChartStart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="extraControls\HideModelPopupInUpdatePanel.aspx.cs">
       <DependentUpon>HideModelPopupInUpdatePanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -742,12 +899,33 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="GridViewDemo\DownLoadFileExe.aspx.cs">
+      <DependentUpon>DownLoadFileExe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\DownLoadFileExe.aspx.designer.cs">
+      <DependentUpon>DownLoadFileExe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewDemo\DynamicAddRow.aspx.cs">
+      <DependentUpon>DynamicAddRow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\DynamicAddRow.aspx.designer.cs">
+      <DependentUpon>DynamicAddRow.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GridViewDemo\OneToMany\EmployWithDepart.aspx.cs">
       <DependentUpon>EmployWithDepart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GridViewDemo\OneToMany\EmployWithDepart.aspx.designer.cs">
       <DependentUpon>EmployWithDepart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewDemo\Pdfs.aspx.cs">
+      <DependentUpon>Pdfs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\Pdfs.aspx.designer.cs">
+      <DependentUpon>Pdfs.aspx</DependentUpon>
     </Compile>
     <Compile Include="GridViewDemo\ShowEnumType.aspx.cs">
       <DependentUpon>ShowEnumType.aspx</DependentUpon>
@@ -784,12 +962,33 @@
     <Compile Include="JqueryPlugins\googleAnalysis.aspx.designer.cs">
       <DependentUpon>googleAnalysis.aspx</DependentUpon>
     </Compile>
+    <Compile Include="JqueryPlugins\JqueryAutocompleteExe.aspx.cs">
+      <DependentUpon>JqueryAutocompleteExe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryPlugins\JqueryAutocompleteExe.aspx.designer.cs">
+      <DependentUpon>JqueryAutocompleteExe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="JqueryPlugins\JqueryDataTableGridView.aspx.cs">
       <DependentUpon>JqueryDataTableGridView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="JqueryPlugins\JqueryDataTableGridView.aspx.designer.cs">
       <DependentUpon>JqueryDataTableGridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JqueryPlugins\PnotifyJsExe.aspx.cs">
+      <DependentUpon>PnotifyJsExe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryPlugins\PnotifyJsExe.aspx.designer.cs">
+      <DependentUpon>PnotifyJsExe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JqueryPlugins\TwoDatePickers.aspx.cs">
+      <DependentUpon>TwoDatePickers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryPlugins\TwoDatePickers.aspx.designer.cs">
+      <DependentUpon>TwoDatePickers.aspx</DependentUpon>
     </Compile>
     <Compile Include="jsonDemo\ParseJsonString.aspx.cs">
       <DependentUpon>ParseJsonString.aspx</DependentUpon>
@@ -804,6 +1003,27 @@
     </Compile>
     <Compile Include="jsonDemo\ReadJsonFile.aspx.designer.cs">
       <DependentUpon>ReadJsonFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqEntityDemo\DealWithNullInLinq.aspx.cs">
+      <DependentUpon>DealWithNullInLinq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqEntityDemo\DealWithNullInLinq.aspx.designer.cs">
+      <DependentUpon>DealWithNullInLinq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqEntityDemo\ParallelForEachStart.aspx.cs">
+      <DependentUpon>ParallelForEachStart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqEntityDemo\ParallelForEachStart.aspx.designer.cs">
+      <DependentUpon>ParallelForEachStart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqEntityDemo\SumDecimal.aspx.cs">
+      <DependentUpon>SumDecimal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqEntityDemo\SumDecimal.aspx.designer.cs">
+      <DependentUpon>SumDecimal.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -831,6 +1051,7 @@
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Entity1.cs" />
+    <Compile Include="Models\First.cs" />
     <Compile Include="Models\Identity\AppIdentityDbContext.cs" />
     <Compile Include="Models\Identity\AppRole.cs" />
     <Compile Include="Models\Identity\AppRoleManager.cs" />
@@ -851,6 +1072,13 @@
     </Compile>
     <Compile Include="officesample\DisablePrintPdf.aspx.designer.cs">
       <DependentUpon>DisablePrintPdf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officesample\MyPdf.aspx.cs">
+      <DependentUpon>MyPdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officesample\MyPdf.aspx.designer.cs">
+      <DependentUpon>MyPdf.aspx</DependentUpon>
     </Compile>
     <Compile Include="officesample\readcsvdemo.aspx.cs">
       <DependentUpon>readcsvdemo.aspx</DependentUpon>
@@ -873,10 +1101,24 @@
     <Compile Include="officesample\WriteDataInDataTableToExcel.aspx.designer.cs">
       <DependentUpon>WriteDataInDataTableToExcel.aspx</DependentUpon>
     </Compile>
+    <Compile Include="officesample\WritePdfToClient.aspx.cs">
+      <DependentUpon>WritePdfToClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officesample\WritePdfToClient.aspx.designer.cs">
+      <DependentUpon>WritePdfToClient.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdoSpressTest.asmx.cs">
       <DependentUpon>AdoSpressTest.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\CallRemoteServerWithDownloadStringWebClient.aspx.cs">
+      <DependentUpon>CallRemoteServerWithDownloadStringWebClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services\CallRemoteServerWithDownloadStringWebClient.aspx.designer.cs">
+      <DependentUpon>CallRemoteServerWithDownloadStringWebClient.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services\CallWebapi.aspx.cs">
       <DependentUpon>CallWebapi.aspx</DependentUpon>
@@ -927,6 +1169,13 @@
     <Compile Include="sqldbexe\DatetimeconvertionInLinqToEntity.aspx.designer.cs">
       <DependentUpon>DatetimeconvertionInLinqToEntity.aspx</DependentUpon>
     </Compile>
+    <Compile Include="sqldbexe\SqlServerIsolation.aspx.cs">
+      <DependentUpon>SqlServerIsolation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sqldbexe\SqlServerIsolation.aspx.designer.cs">
+      <DependentUpon>SqlServerIsolation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StartupBack.cs" />
     <Compile Include="Utils\ControlHelper.cs" />
     <Compile Include="Utils\EncryptDecryptUtil.cs" />
@@ -969,8 +1218,31 @@
     <Compile Include="xmlDemo\generateXsltConditionally.aspx.designer.cs">
       <DependentUpon>generateXsltConditionally.aspx</DependentUpon>
     </Compile>
+    <Compile Include="xmlDemo\IArchiveDescription.cs" />
+    <Compile Include="xmlDemo\SerializeHtml.aspx.cs">
+      <DependentUpon>SerializeHtml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xmlDemo\SerializeHtml.aspx.designer.cs">
+      <DependentUpon>SerializeHtml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xmlDemo\TestXmlSerialize.aspx.cs">
+      <DependentUpon>TestXmlSerialize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xmlDemo\TestXmlSerialize.aspx.designer.cs">
+      <DependentUpon>TestXmlSerialize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xmlDemo\XmlElementMethodDes.aspx.cs">
+      <DependentUpon>XmlElementMethodDes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xmlDemo\XmlElementMethodDes.aspx.designer.cs">
+      <DependentUpon>XmlElementMethodDes.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AjaxTookKitDemo\images\" />
     <Folder Include="App_Data\" />
     <Folder Include="images\small\" />
   </ItemGroup>
@@ -979,6 +1251,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Services\WriteImages.ashx" />
+    <Content Include="Scripts\knockout.validation.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

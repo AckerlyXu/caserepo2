@@ -39,4 +39,8 @@
         </div>
     </div>
 
+
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+<br /> <br />
+<asp:Button ID="Button1" runat="server" Text="Button" />
 </asp:Content>

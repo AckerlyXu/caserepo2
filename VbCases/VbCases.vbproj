@@ -773,6 +773,7 @@
     <Content Include="gridviewdemo\IfElse.aspx" />
     <Content Include="gridviewdemo\showdatetime.aspx" />
     <Content Include="account\PKILogin.aspx" />
+    <Content Include="javascriptDemo\ScollToTest.aspx" />
     <Content Include="rep.pdf" />
     <Content Include="RuleSet2.ruleset">
       <SubType>Designer</SubType>
@@ -780,6 +781,7 @@
     <Content Include="account\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="xmlDemo\ReplaceNodeText.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="JqueryPlugins.aspx" />
     <Content Include="Production\test.aspx" />
@@ -905,6 +907,13 @@
       <DependentUpon>showdatetime.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="javascriptDemo\ScollToTest.aspx.designer.vb">
+      <DependentUpon>ScollToTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="javascriptDemo\ScollToTest.aspx.vb">
+      <DependentUpon>ScollToTest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="JqueryPlugins.aspx.designer.vb">
       <DependentUpon>JqueryPlugins.aspx</DependentUpon>
     </Compile>
@@ -966,6 +975,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.vb">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="xmlDemo\ReplaceNodeText.aspx.designer.vb">
+      <DependentUpon>ReplaceNodeText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xmlDemo\ReplaceNodeText.aspx.vb">
+      <DependentUpon>ReplaceNodeText.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,8 +28,12 @@ namespace WebFormCases2.csharpDemp
                 )).ToArray();
             foreach (var item in orderLine)
             {
-                Response.Write("Ref:"+item+"<br/>");
+              //  Response.Write("Ref:"+item+"<br/>");
             }
+            EntreeAc.DataSource =new ArrayList() { new { header = "header1", content = "content1" } };
+            EntreeAc.DataBind();
+            SidesAc.DataSource = new ArrayList() { new { header = "header2", content = "content2" } };
+            SidesAc.DataBind();
         }
     }
 }

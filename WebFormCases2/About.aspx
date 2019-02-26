@@ -32,18 +32,108 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
-
+    <div id='calendar'></div>
 
     <asp:Label ID="Label1" runat="server" Text="" ></asp:Label><script src="/Scripts/jquery-1.9.1.js"></script>
+    <link href="https://fullcalendar.io/assets/demo-topbar.css" rel="stylesheet" />
+    <link href="https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.css" rel="stylesheet" />
+  
+       <link href="https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.print.css" rel="stylesheet"  media='print'/>
+    <script src="https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/moment.min.js"></script>
+  
+    <script src="https://fullcalendar.io/releases/fullcalendar/3.9.0/lib/jquery.min.js"></script>
+    <script src="https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+    <script src="https://fullcalendar.io//assets/demo-to-codepen.js"></script>
     <script>
-        window.onload = function () {
-             document.onclick = function (e) {
-                 console.log(e);
-                 
-        }
-        }
-       
+       $.ajax({
+            type: "POST",
+           url: "/Services/MyService.asmx/HelloWorld2",
+           //  data: "{ user_id: '" + 1006 + "'}",
+           data: JSON.stringify({ user: { user_id: 1006 } }),
+            contentType: "application/json",
+            datatype: "json",
+           success: function (data) {
+               console.log(data);
+           },
+              
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                
+            }
+        });
+
+
+    //    $(function () {
+    //    var eventsArray = [{
+
+    //        title: 'Test1',
+    //        start: "2018-12-16T00:00:00",
+    //        end: "2018-12-19T00:00:00",
+    //        allDay: true,
+    //        editable: true
+    //    },
+    //    {
+
+    //        title: 'Test2',
+    //        start: "2018-12-18T00:00:00",
+    //        end: "2018-12-19T00:00:00",
+    //        allDay: true,
+    //        editable: false
+
+    //    }
+    //    ];
+          
+    //        $('#calendar').fullCalendar({
+    //            header: {
+    //                left: 'prev,next today',
+    //                center: 'title',
+    //                right: 'month,agendaWeek,agendaDay'
+    //            },
+    //            editable: true,
+    //            eventLimit: true, // when too many events in a day, show the popover
+    //            events: [{ title: { a: "a" } }],
+    //        eventResize: function (event, delta) {
+    //            event.editable = false;
+    //            console.log(this);
+    //        },
+    //        eventDropStart: function (event) {
+    //            eventsArray[0].editable = false;
+    //            event.editable = false;
+                
+    //        },
+    //        eventRender: function (event, element) {
+           
+    //          //  console.log(event);
+    //            console.log(event);
+    //        } ,
+    //        eventDrop: function (event, delta) {
+    //            eventsArray[0].editable = false;
+    //            event.editable = false;
+                
+    //        },
+    //        eventDragStop: function (event) {
+    //            console.log(event);
+    //        }
+
+    //        });
+
+
+
+    //        $('div[id*=calender]').fullCalendar({
+    //                header: {
+    //                    left: 'prev,next today',
+    //                    center: 'title',
+    //                    right: 'month,agendaWeek,agendaDay'
+    //                },
+    //                editable: true,
+    //                events: eventsArray
+    //            });
+                
+           
+    //})
+
     </script>
+
+
 
 
 </asp:Content>

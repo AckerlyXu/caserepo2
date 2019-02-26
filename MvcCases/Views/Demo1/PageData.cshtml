@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "PageData";
+}
+
+<h2>PageData</h2>
+
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">CustomerID</th>
+            <th scope="col">CompanyName</th>
+            <th scope="col">ContactName</th>
+            <th scope="col">ContactTitle</th>
+            <th scope="col">Address</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+    </tbody>
+</table>
+
+<nav >
+    <ul class="pagination">
+        <li class="page-item ">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>
+
+@section scripts{
+    
+        <script>
+                
+            function getPageData(currentPage, pageSize) {
+
+                var currentPage = currentPage || 1;
+                var pageSize = pageSize || 10;
+                $.post(
+
+                    "@Url.Action("PageData")",
+
+                    { currentPage: currentPage, pageSize: pageSize },
+                    function (data) {
+                        var pagination = "";
+                        if (currentPage != 1) {
+                            pagination += '<li class="page-item "><a class="page-link" href="' + (parseInt(currentPage)-1) + '" tabindex = "-1"  > Previous</a ></li >'
+                        }
+                        for (var i = 1; i <= data.totalPage; i++) {
+
+                            pagination += ' <li class="page-item  ' + (i == currentPage ? 'active' : '') + '"><a class="page-link " href="' + (i == currentPage ? "javascript:;" : i) + '">'+i+'</a></li>';
+                            console.log(' <li class="page-item ' + (currentPage==i?'active':'') + '"><a class="page-link " href="#">1</a></li>');
+                        }
+                     
+                        if (currentPage != data.totalPage) {
+                            console.log(currentPage + 1);
+                            pagination += ' <li class="page-item"><a class="page-link" href = "' + (parseInt(currentPage)+1) + '" > Next</a ></li >'
+                        }
+                        $(".pagination").html(pagination);
+                        var tableHtml = "";
+                        for (var i = 0; i < data.data.length; i++) {
+                            tableHtml += "<tr><td>" + data.data[i].CustomerID + "</td><td>" + data.data[i].CompanyName + "</td><td>" + data.data[i].ContactName + "</td><td>" + data.data[i].ContactTitle + "</td><td>" + data.data[i].Address+"</td></tr>"
+                        }
+                        $("tbody").html(tableHtml);
+
+                        $(".pagination li").not(".active").find("a").click(function () {
+                            var currentPage = $(this).attr("href");
+                            var pageSize = 10;
+                            getPageData(currentPage, pageSize);
+                            return false;
+                        })
+                    }
+                    ,
+                    "json"
+                )
+
+            }
+            $(function () {
+                getPageData();
+            })
+        </script>
+    
+    }

@@ -1,0 +1,41 @@
+﻿@model string
+@{
+    ViewBag.Title = "BindSelect";
+}
+
+<h2>BindSelect</h2>
+<button data-bind="click:add">[+]</button><button data-bind="click:remove">[-]</button>
+@* loop through the selectedColor , the count of dropdownlist is the length of selectedColor *@
+<div data-bind="foreach:selectedColors">
+    <select data-bind="options:colors,optionsText:'Text',value:data"></select>
+</div>
+
+
+@section scripts{
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script>
+      
+        var colors =  @Html.Raw(@Model);
+        
+        var viewModel = {
+            // data of options
+            colors: ko.observableArray(
+              
+               colors
+            ),
+            // intial the dropdownlist 
+            selectedColors: ko.observableArray([{ data: colors[0] }]),
+            // add a dropdownlist
+            add: function () {
+                this.selectedColors.push({ data:colors[0]} )
+                
+            },
+            // remove a dropdownlist
+            remove: function () {
+                this.selectedColors.pop();
+            }
+        }
+        ko.applyBindings(viewModel);
+    </script>
+    }

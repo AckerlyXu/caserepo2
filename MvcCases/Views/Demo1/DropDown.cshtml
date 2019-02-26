@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "DropDown";
+}
+
+<h2>DropDown</h2>
+
+<div><button id="plus">[+]</button>@Html.DropDownList("myname", ViewData["items"] as List<SelectListItem>) </div>
+
+@section scripts{
+    
+     <script>
+         $(function(){
+         
+             $("#plus").click(function () {
+                 var clone = $(this).parent().clone();
+                 $(this).parent().after(clone);
+                
+                 clone.find("option").prop("selected", false);
+                 clone.find("option:first").prop("seleted", true);
+                 clone.find("button").removeAttr("id").html("[-]").click(function () {
+                     var parent = $(this).parent();
+                     parent.remove();
+                    
+                 })
+             })
+         
+         })
+     </script>
+    
+    }
+

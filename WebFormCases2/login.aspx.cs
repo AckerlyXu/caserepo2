@@ -4,6 +4,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
@@ -19,9 +20,10 @@ namespace WebFormCases2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           AppUser user = UserManager.FindByEmail("ackerly@gmail.com");
-            string id = user.Id;
-            Session["user_id"] = id;
+           
+            //AppUser user = UserManager.FindByEmail("ackerly@gmail.com");
+            //string id = user.Id;
+            //Session["user_id"] = id;
         }
         private IAuthenticationManager AuthManager
         {
