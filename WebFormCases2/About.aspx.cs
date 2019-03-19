@@ -22,37 +22,6 @@ namespace WebFormCases2
         {
           
 
-                SqlConnection con = new SqlConnection(constr);
-                using (SqlCommand com = new SqlCommand("select * from customers", con))
-                {
-                    try
-                    {
-                       
-                        con.Open();
-
-
-
-                    using ( SqlDataReader reader =com.ExecuteReader())
-                    {
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                Response.Write(reader.GetString(2));
-                            }
-                        }
-                    }
-                    }
-                    catch (Exception)
-                    {
-                        con.Close();
-                        con.Dispose();
-
-                        throw;
-                    }
-
-                }
-
             
 
         }

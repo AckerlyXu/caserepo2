@@ -7,6 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script src="../Scripts/jquery-1.9.1.js"></script>
     <style>
         .test{
             display:inline-block

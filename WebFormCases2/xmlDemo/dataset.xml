@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+ <music>
+                          <song>
+                            <artist>The Chi-lites</artist>
+                            <genre>Soul</genre>
+                            <album>A lonely man</album>
+                            <year>1972</year>
+                          </song>
+                          <song>
+                            <artist>Babyface</artist>
+                            <genre>RB</genre>
+                            <album>unknown</album>
+                            <year></year>
+                          </song>
+                          <song>
+                            <artist>Babyface</artist>
+                            <genre>RB</genre>
+                            <album>The essential babyface</album>
+                            <year>2001</year>
+                          </song>
+                          <song>
+                            <artist>Babyface</artist>
+                            <genre>RB</genre>
+                            <album>Grown and sexy</album>
+                            <year>2005</year>
+                          </song>
+                          <song>
+                            <artist>Maria Arredondo</artist>
+                            <genre>Pop</genre>
+                            <album>Not going under</album>
+                            <year>2004</year>
+                          </song>
+                      
+ </music>

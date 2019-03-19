@@ -8,8 +8,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-        </div>
+    
     </form>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:EntityDb %>" SelectCommand="SELECT [id], [name], [age] FROM [student]"></asp:SqlDataSource>
 </body>
 </html>

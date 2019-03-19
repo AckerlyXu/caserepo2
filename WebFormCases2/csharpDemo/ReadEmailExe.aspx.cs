@@ -27,7 +27,7 @@ namespace WebFormCases2.csharpDemp
 
                     // The Inbox folder is always available on all IMAP servers...
                     var inbox = client.Inbox;
-                    inbox.Open(FolderAccess.ReadOnly);
+                    inbox.Open(FolderAccess.ReadOnly|FolderAccess.None);
                  
                    Response.Write("Total messages: "+ inbox.Count+"<br/>");
                 Response.Write("Recent messages:"+ inbox.Recent+"<br/>");
@@ -41,8 +41,9 @@ namespace WebFormCases2.csharpDemp
                     foreach (var attachment in message.Attachments)
                     {
                         var fileName = attachment.ContentDisposition?.FileName ?? attachment.ContentType.Name;
-
-                        using (var stream = File.Create(fileName))
+                      
+                       
+                        using (var stream = File.Create(Server.MapPath("/csharpDemo/") + fileName))
                         {
                             if (attachment is MessagePart)
                             {
@@ -57,7 +58,12 @@ namespace WebFormCases2.csharpDemp
 
                                 part.Content.DecodeTo(stream);
                             }
+                          
+                         
+
+
                         }
+                      //  File.WriteAllBytes(Server.MapPath("/csharpDemo/") + fileName, bys);
                     }
 
                     Response.Write( "subject:"+message.Subject+"<br/>");

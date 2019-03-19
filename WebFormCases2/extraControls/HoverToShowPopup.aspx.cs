@@ -11,7 +11,9 @@ namespace WebFormCases2.extraControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+#pragma warning disable CS0219 // The variable 'a' is assigned but its value is never used
             int a = 0;
+#pragma warning restore CS0219 // The variable 'a' is assigned but its value is never used
         }
     }
 }

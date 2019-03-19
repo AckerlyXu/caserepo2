@@ -29,5 +29,8 @@ D:\develop\vsworkspace\WebFormCases2\MyTest\obj\Debug\MyTest.csproj.CoreCompileI
 D:\develop\vsworkspace\WebFormCases2\MyTest\obj\Debug\MyTest.csproj.CopyComplete
 D:\develop\vsworkspace\WebFormCases2\MyTest\obj\Debug\MyTest.dll
 D:\develop\vsworkspace\WebFormCases2\MyTest\obj\Debug\MyTest.pdb
-D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\MyTest.dll.CodeAnalysisLog.xml
-D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\MyTest.dll.lastcodeanalysissucceeded
+D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\MyTest.dll.config
+D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\EntityFramework.dll
+D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\Newtonsoft.Json.dll
+D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\EntityFramework.xml
+D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\Newtonsoft.Json.xml

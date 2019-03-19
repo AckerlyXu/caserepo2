@@ -38,7 +38,8 @@ namespace WebFormCases2.GridViewDemo
         {
             if(e.Row.RowType == DataControlRowType.DataRow)
             {
-                GridViewRow row = new GridViewRow(0,0, DataControlRowType.DataRow, DataControlRowState.Normal);
+                
+                            GridViewRow row = new GridViewRow(0,0, DataControlRowType.DataRow, DataControlRowState.Normal);
                 row.Cells.Add(new TableCell() { Text = e.Row.Cells[1].Text ,ColumnSpan=3});
                 int rowIndex = e.Row.RowIndex;
                 GridView1.Controls[0].Controls.Add(row );
@@ -74,6 +75,22 @@ namespace WebFormCases2.GridViewDemo
             /* Verifies that the control is rendered */
         }
 
-    
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+             
+            Response.Write(e.NewPageIndex);
+            BindGridView();
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            Response.Write(e.CommandName);
+        }
+
+        protected void GridView1_Sorting(object sender, GridViewSortEventArgs e)
+        {
+          
+        }
     }
 }

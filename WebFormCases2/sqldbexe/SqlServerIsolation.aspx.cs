@@ -45,14 +45,18 @@ namespace WebFormCases2.sqldbexe
                     transaction.Commit();
                       
                     }
+#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                     catch (Exception ex)
+#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                     {
                       
                         try
                         {
                             transaction.Rollback();
                         }
+#pragma warning disable CS0168 // The variable 'ex2' is declared but never used
                         catch (Exception ex2)
+#pragma warning restore CS0168 // The variable 'ex2' is declared but never used
                         {
                          
                         }

@@ -186,11 +186,14 @@ namespace WebFormCases2.csharpDemo
 
             Dictionary<string, string> responseValues = new Dictionary<string, string>();
             string redirectUrl = null;
+            string searchUrl = null;
 
             if (!response.responseEnvelope.ack.ToString().Trim().ToUpper().Equals(AckCode.FAILURE.ToString()) && !response.responseEnvelope.ack.ToString().Trim().ToUpper().Equals(AckCode.FAILUREWITHWARNING.ToString()))
             {
-                redirectUrl = "http://localhost:53239/About.aspx" + "_ap-payment&paykey=" + response.payKey;
-
+                redirectUrl = "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=" + "_ap-payment&paykey=" + response.payKey;
+                searchUrl = "/csharpDemo/paypalStart2.aspx?payKey=" + response.payKey;
+                HyperLink1.NavigateUrl = searchUrl;
+                HyperLink1.Text = searchUrl;
                 // The pay key, which is a token you use in other Adaptive Payment APIs 
                 // (such as the Refund Method) to identify this payment. 
                 // The pay key is valid for 3 hours; the payment must be approved while the 
@@ -246,6 +249,7 @@ namespace WebFormCases2.csharpDemo
                     LabelWebFlow.Text = "This API has Web Flow to redirect the user to complete the API call, please click the hyperlink to redirect the user to ";
                     HyperLinkWebFlow.Text = redirectUrl;
                     HyperLinkWebFlow.NavigateUrl = redirectUrl;
+                   
                     LabelWebFlowSuffix.Text = ".<br/><br/>";
                 }
             }

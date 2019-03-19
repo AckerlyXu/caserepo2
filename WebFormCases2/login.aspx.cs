@@ -56,7 +56,7 @@ namespace WebFormCases2
         protected void Button1_Click(object sender, EventArgs e)
         {
          Task<AppUser> result =   UserManager.FindAsync(TextBox1.Text, TextBox2.Text);
-        
+                      
             AppUser user = result.Result;
 
             if (user != null)

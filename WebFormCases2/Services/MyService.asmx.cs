@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.Services;
 
 namespace WebFormCases2.Services
@@ -19,14 +20,24 @@ namespace WebFormCases2.Services
     {
 
         [WebMethod]
-        public int HelloWorld(int user_id)
+        public List<TrainingDates> HelloWorld(int user_id)
         {
 
             //  table.Columns.Add(new DataColumn("column1", typeof(string)));
             //table.Rows.Add("a");
             //table.Rows.Add("b");
             //table.Rows.Add("c");
-            return user_id;
+            var TDates = new List<TrainingDates>();
+            var js = new JavaScriptSerializer();
+            var dates = new TrainingDates
+            {
+                training_title = "Induction Workshop has been scheduled on 27th – 29th March 2019",
+                date = "2/24/2019 12:00:00 AM"
+            };
+
+            TDates.Add(dates);
+            return TDates;
+            //Context.Response.Write(js.Serialize(TDates));
 
         }
         [WebMethod]
@@ -44,6 +55,11 @@ namespace WebFormCases2.Services
 
 
 
+    }
+    public class TrainingDates
+    {
+        public string training_title { get; set; }
+        public string date { get; set; }
     }
    public  class User
     {

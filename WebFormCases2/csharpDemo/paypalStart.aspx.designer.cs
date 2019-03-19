@@ -301,6 +301,15 @@ namespace WebFormCases2.csharpDemo {
         protected global::System.Web.UI.WebControls.HyperLink HyperLinkWebFlow;
         
         /// <summary>
+        /// HyperLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        
+        /// <summary>
         /// LabelWebFlowSuffix control.
         /// </summary>
         /// <remarks>

@@ -1,0 +1,11 @@
+D:\develop\vsworkspace\WebFormCases2\CoreProject\bin\Debug\netcoreapp2.0\CoreProject.deps.json
+D:\develop\vsworkspace\WebFormCases2\CoreProject\bin\Debug\netcoreapp2.0\CoreProject.runtimeconfig.json
+D:\develop\vsworkspace\WebFormCases2\CoreProject\bin\Debug\netcoreapp2.0\CoreProject.runtimeconfig.dev.json
+D:\develop\vsworkspace\WebFormCases2\CoreProject\bin\Debug\netcoreapp2.0\CoreProject.dll
+D:\develop\vsworkspace\WebFormCases2\CoreProject\bin\Debug\netcoreapp2.0\CoreProject.pdb
+D:\develop\vsworkspace\WebFormCases2\CoreProject\obj\Debug\netcoreapp2.0\CoreProject.csprojAssemblyReference.cache
+D:\develop\vsworkspace\WebFormCases2\CoreProject\obj\Debug\netcoreapp2.0\CoreProject.csproj.CoreCompileInputs.cache
+D:\develop\vsworkspace\WebFormCases2\CoreProject\obj\Debug\netcoreapp2.0\CoreProject.AssemblyInfoInputs.cache
+D:\develop\vsworkspace\WebFormCases2\CoreProject\obj\Debug\netcoreapp2.0\CoreProject.AssemblyInfo.cs
+D:\develop\vsworkspace\WebFormCases2\CoreProject\obj\Debug\netcoreapp2.0\CoreProject.dll
+D:\develop\vsworkspace\WebFormCases2\CoreProject\obj\Debug\netcoreapp2.0\CoreProject.pdb

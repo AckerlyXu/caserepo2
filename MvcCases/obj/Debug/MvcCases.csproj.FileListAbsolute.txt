@@ -84,7 +84,6 @@ D:\develop\vsworkspace\WebFormCases2\MvcCases\bin\Microsoft.AI.DependencyCollect
 D:\develop\vsworkspace\WebFormCases2\MvcCases\bin\Microsoft.AI.WindowsServer.xml
 D:\develop\vsworkspace\WebFormCases2\MvcCases\bin\Microsoft.AI.Web.xml
 D:\develop\vsworkspace\WebFormCases2\MvcCases\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\develop\vsworkspace\WebFormCases2\MvcCases\obj\Debug\MvcCases.csprojAssemblyReference.cache
 D:\develop\vsworkspace\WebFormCases2\MvcCases\obj\Debug\MvcCases.csproj.CoreCompileInputs.cache
 D:\develop\vsworkspace\WebFormCases2\MvcCases\obj\Debug\MvcCases.csproj.CopyComplete
 D:\develop\vsworkspace\WebFormCases2\MvcCases\obj\Debug\MvcCases.dll
@@ -93,3 +92,4 @@ D:\develop\vsworkspace\WebFormCases2\MvcCases\bin\EntityFramework.dll
 D:\develop\vsworkspace\WebFormCases2\MvcCases\bin\EntityFramework.SqlServer.dll
 D:\develop\vsworkspace\WebFormCases2\MvcCases\bin\EntityFramework.xml
 D:\develop\vsworkspace\WebFormCases2\MvcCases\bin\EntityFramework.SqlServer.xml
+D:\develop\vsworkspace\WebFormCases2\MvcCases\obj\Debug\MvcCases.csprojAssemblyReference.cache

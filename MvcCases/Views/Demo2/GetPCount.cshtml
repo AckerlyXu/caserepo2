@@ -1,0 +1,355 @@
+﻿
+@{
+    ViewBag.Title = "GetPCount";
+    Layout = null;
+}
+
+<html>
+<head>
+
+    <title>MyCSS - No Master Layout</title>
+
+    <link id="myCss" href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+
+        var list = [];
+        var count = 0;
+        var listComments = [];
+        var currentdate = new Date();
+        $(document).ready(function(){
+
+            $("#Style").change(function(){
+
+               // alert($("#Style option:selected").text());
+               // alert($("#Style option:selected").val());
+               // var link = $("#myCss[rel=stylesheet]")[0].href;
+              //  alert("link "+ link)
+                $('#myCss').attr('href', $("#Style option:selected").val());
+              //  var css = link.substring(link.lastIndexOf('/') + 1, link.length)
+              //  alert("css  "  + css)
+                //$('#myCss[href="' + css + '"]').attr('href', $('#Style').val() + '.css');
+               // $('link[href="' + css + '"]').attr('href', $('#changeCss').val() + '.css');
+})
+
+            $(document).on("click", "div.reply", function () {
+             //   $("#tableDiv2").append('<div>' + "dfsd" + '</div>')
+
+              //  alert("id is " + $(this).attr("id"))
+                //if ($("#comment").hasClass("fadeout")) {
+
+                //    $("#commentdiv").slideDown("slow")
+
+                //}
+                //else
+                //    $("#comment").removeClass("fadein").addClass("fadeout");
+
+                //$("#comment").css("display", "block")
+
+                //$("#commentdiv").css("display", "block")
+                //$("#Topictext").css("display", "block")
+
+
+
+
+                //$("#Topictext").html($(this).attr("id"))
+               // alert("Substring " + $(this).attr("id").substr($(this).attr("id").indexOf("_") + 1))
+                var index = $(this).attr("id").substr($(this).attr("id").indexOf("_") + 1);
+               // alert (index)
+                $("#Topictext").html(list[index][0])
+                $("#Topictextid").html($(this).attr("id"))
+               // alert("my " + $("#Topictextid").html())
+
+
+
+
+            })
+
+
+            $("#btnAddComment").click(function () {
+
+                var textcoment = $("#txttopicComment").val();
+               // alert(textcoment)
+                if (textcoment != "") {
+
+                    listComments.push([$("#Topictext").html(), textcoment,])
+
+
+                    for (var i = 0; i < list.length; i++) {
+
+                        alert("topic is " + listComments[i][0] + " Cooment is " + listComments[i][1]);
+
+                        if (list[i][0] == $("#Topictext").html()) {
+
+                            $("<p class=commentcss style=word-wrap: break-all>" + "<span>" + textcoment + "        " + (currentdate.getMonth() + 1) + '/' + currentdate.getDate() + '/' + currentdate.getFullYear() + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds() + "</span>").insertAfter($("#div_" + [i]));
+                            $(".commentcss").css('background-color', "lightslategray");
+
+                            $("div.reply").each(function (index, ele) {
+                                console.log($(ele).attr("id") + ":" + $(ele).nextUntil("div.header").filter("p").length)
+                            })
+
+
+                        }
+
+                    }
+
+
+
+
+                }
+
+              //  $("#commentdiv").slideUp("slow")
+            })
+            $("#btnAdd").click(function () {
+
+                // if()
+                var text = $("#txttopic").val();
+
+                if (text != "") {
+                    //  list.push(text)
+
+                    //check if already exist
+
+
+                    var topicname = $('div.header').html();
+                  //  alert(topicname)
+                   // alert ("count list"+ list.length)
+                    var index =jQuery.inArray(topicname, list)
+
+                    alert(index)
+
+
+                        //alert($myDiv.length)
+                    //if (jQuery.inArray(topicname, list >=0 )) {
+                    //      //  jQuery.inArray(topicname, list);
+                    //      //  alert("exist")
+
+                    //    }
+                    //    else {
+                            list.push([text, (currentdate.getMonth() + 1) + '/' + currentdate.getDate() + '/' + currentdate.getFullYear() + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds()]);
+                       // }
+                            //you can now reuse  $myDiv here, without having to select it again.
+
+
+                    // alert(list);
+
+
+                }
+                else {
+
+                    alert("Enter Topic")
+                }
+
+
+                for (var i = 0; i < list.length; i++)
+                {
+                   // alert(list[i]);
+
+                }
+
+
+                //*************************************Create Table Dynamillay *****************/
+
+                var number_of_rows = list.length;
+                var number_of_cols = 2;
+                var table_body = '<table border="1">';
+                table_body += '<th>Name</th>'
+                table_body += '<th>time</th>'
+
+                for (var i = 0; i < number_of_rows; i++) {
+                    table_body += '<tr>';
+                    for (var j = 0; j < number_of_cols; j++) {
+                        table_body += '<td>';
+
+                        //if (j == 1) {
+
+
+                        //    //table_body += (currentdate.getMonth() + 1) + '/' + currentdate.getDate() + '/' + currentdate.getFullYear() + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+
+
+                        //}
+                     //   else {
+                            table_body += list[i][j];
+                       // }
+                        table_body += '</td>';
+                    }
+                    table_body += '</tr>';
+                }
+                table_body += '</table>';
+                //$('#tableDiv').html(table_body);
+
+
+                //******************************************************************/
+
+                //*************************************Create Datalist Dynamillay *****************/
+
+                //var number_of_rows = list.length;
+                //var number_of_cols = 2;
+                //var table_body = '<table border="1">';
+                //table_body += '<th>Name</th>'
+                //table_body += '<th>time</th>'
+
+                $("#tableDiv2").css("display", "block")
+
+
+
+              //  alert(number_of_rows)
+                  for (var i = number_of_rows; i >= number_of_rows; i--) {
+
+
+                      $("#tableDiv2").append( '<div class="blogdata header">' + list[i - 1][0] +  '</div>');
+                      $("#tableDiv2").append('<div class="blogdata">' + list[i - 1][1] + '</div>');
+                      idtopic = [i - 1][0]
+                      $('#tableDiv2').append('<div class="blogdata reply"  id=' + "div_" + idtopic + '>' + "Reply" + '</div>')
+                      $("#tableDiv2").append("<BR>"); //work fine
+
+
+
+                }
+
+
+
+
+                //******************************************************************/
+
+
+            })
+
+        });
+    </script>
+</head>
+
+<body class="body-content">
+    <select id="Style">
+        <option value="0">Select</option>
+
+        <option value="~/Content/StyleSheet1.css">Grey</option>
+        <option value="~/Content/StyleSheet2.css">pink</option>
+
+    </select>
+    <div class="container">
+        <div class="container-fluid main col-lg-6" style="padding-bottom:3rem">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3"></div>
+
+
+                <div class="col-lg-10 topicdiv">
+
+                    <h3>CreateTopic</h3>
+                </div>
+
+
+                <div class="col-lg-2">
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3 lbltopic">
+                    Topic Title
+                </div>
+
+                <div class="col-lg-6" style="padding-top: 4rem;padding-left: 10px;">
+                    <input type="text" value="" id="txttopic">
+                </div>
+                <div class="col-lg-3">
+                </div>
+
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3">
+
+                </div>
+                <div class="col-lg-6">
+                    <button id="btnAdd" value="Add">Add Topic</button>
+                </div>
+
+                <div class="col-lg-3">
+
+                </div>
+
+
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-1">
+
+                </div>
+
+                <div id="tableDiv2" class="col-lg-10" style="display: none">
+                    <h2 class="topics">Topics</h2>
+                    <h5>orem ipsum dolor sit amet, consectetuer adipisis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget</h5>
+
+                </div>
+
+                <div class="col-lg-1">
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div id="commentdiv" class="container-fluid main col-lg-6" style="padding-bottom:53rem">
+            <div class="row">
+                <div class="col-lg-1"></div>
+
+
+
+                <div class="col-lg-10 topicdiv">
+
+                    <h3>Blog comments</h3>
+                </div>
+
+
+                <div class="col-lg-1">
+                </div>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-lg-1">
+
+                </div>
+
+                <div id="comment" class="col-lg-10" style="padding-top:2rem">
+                    Comments
+                    <br />
+                    <div id="Topictext" style="">aaaa</div>
+                    <div id="Topictextid" style="">aaaa</div>
+                    <textarea rows="1" class="txtcomment" value="" id="txttopicComment"></textarea>
+                    <br />
+                    <button id="btnAddComment" value="Add">Add Comment</button>
+                </div>
+
+                <div class="col-lg-1">
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <input value="click" id="show" />
+</body>
+<script>
+    $(function () {
+        $("#show").click(function () {
+               $("#")
+        })
+    })
+
+</script>
+</html>
+

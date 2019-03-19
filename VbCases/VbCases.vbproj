@@ -63,6 +63,8 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -169,6 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="ado.netDemo\ParamizedSql.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -744,9 +747,10 @@
     <Content Include="crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
     <Content Include="crystalreportviewers13\urlreporting\activexviewer.js" />
     <Content Include="crystalreportviewers13\urlreporting\appletviewer.js" />
+    <Content Include="csharpdemo\ListBasic.aspx" />
+    <Content Include="csharpdemo\TimeSpanExe.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Development\test.aspx" />
-    <Content Include="dropdownDemo\RemoveDropdownitem.aspx" />
     <Content Include="dropdownDemo\SelectIndexEventToChangebkcolorOfGridViewRow.aspx" />
     <Content Include="extraConrols\BindDataAccordingToCheckBox.aspx" />
     <Content Include="extraConrols\CrystalStart.aspx" />
@@ -773,7 +777,10 @@
     <Content Include="gridviewdemo\IfElse.aspx" />
     <Content Include="gridviewdemo\showdatetime.aspx" />
     <Content Include="account\PKILogin.aspx" />
+    <Content Include="gridviewdemo\SqlDatatSourceNumericColumnName.aspx" />
+    <Content Include="javascriptDemo\MaintainScroll.aspx" />
     <Content Include="javascriptDemo\ScollToTest.aspx" />
+    <Content Include="LinqDemo\DatatableWithLinq.aspx" />
     <Content Include="rep.pdf" />
     <Content Include="RuleSet2.ruleset">
       <SubType>Designer</SubType>
@@ -782,6 +789,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="xmlDemo\ReplaceNodeText.aspx" />
+    <None Include="Connected Services\Calculator\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="JqueryPlugins.aspx" />
     <Content Include="Production\test.aspx" />
@@ -817,6 +828,13 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ado.netDemo\ParamizedSql.aspx.designer.vb">
+      <DependentUpon>ParamizedSql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ado.netDemo\ParamizedSql.aspx.vb">
+      <DependentUpon>ParamizedSql.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="About.aspx.designer.vb">
@@ -827,11 +845,30 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Class1.vb" />
+    <Compile Include="Connected Services\Calculator\Reference.vb">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="Contact.aspx.designer.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="csharpdemo\ListBasic.aspx.designer.vb">
+      <DependentUpon>ListBasic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpdemo\ListBasic.aspx.vb">
+      <DependentUpon>ListBasic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="csharpdemo\TimeSpanExe.aspx.designer.vb">
+      <DependentUpon>TimeSpanExe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpdemo\TimeSpanExe.aspx.vb">
+      <DependentUpon>TimeSpanExe.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.vb">
@@ -846,13 +883,6 @@
     </Compile>
     <Compile Include="Development\test.aspx.vb">
       <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="dropdownDemo\RemoveDropdownitem.aspx.designer.vb">
-      <DependentUpon>RemoveDropdownitem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="dropdownDemo\RemoveDropdownitem.aspx.vb">
-      <DependentUpon>RemoveDropdownitem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="dropdownDemo\SelectIndexEventToChangebkcolorOfGridViewRow.aspx.designer.vb">
@@ -907,6 +937,20 @@
       <DependentUpon>showdatetime.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="gridviewdemo\SqlDatatSourceNumericColumnName.aspx.designer.vb">
+      <DependentUpon>SqlDatatSourceNumericColumnName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gridviewdemo\SqlDatatSourceNumericColumnName.aspx.vb">
+      <DependentUpon>SqlDatatSourceNumericColumnName.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="javascriptDemo\MaintainScroll.aspx.designer.vb">
+      <DependentUpon>MaintainScroll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="javascriptDemo\MaintainScroll.aspx.vb">
+      <DependentUpon>MaintainScroll.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="javascriptDemo\ScollToTest.aspx.designer.vb">
       <DependentUpon>ScollToTest.aspx</DependentUpon>
     </Compile>
@@ -919,6 +963,13 @@
     </Compile>
     <Compile Include="JqueryPlugins.aspx.vb">
       <DependentUpon>JqueryPlugins.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LinqDemo\DatatableWithLinq.aspx.designer.vb">
+      <DependentUpon>DatatableWithLinq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqDemo\DatatableWithLinq.aspx.vb">
+      <DependentUpon>DatatableWithLinq.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -1021,9 +1072,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="South\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Calculator\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

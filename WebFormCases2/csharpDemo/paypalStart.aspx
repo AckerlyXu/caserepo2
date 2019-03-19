@@ -128,8 +128,8 @@ ul.wizard li.complete {
                     Action Type*</div>
                 <div class="param_value">
                     <asp:DropDownList runat="server" ID="actionType">
-                        <asp:ListItem Text="Pay" Value="PAY" Enabled="True" />
-                        <asp:ListItem Text="Pay Primary" Value="PAY_PRIMARY" Selected="True" />
+                        <asp:ListItem Text="Pay" Value="PAY" Enabled="True" Selected="True"  />
+                        <asp:ListItem Text="Pay Primary" Value="PAY_PRIMARY" />
                         <asp:ListItem Text="Create" Value="CREATE" Enabled="false" />
                     </asp:DropDownList>
                 </div>
@@ -281,10 +281,13 @@ ul.wizard li.complete {
             <asp:Label runat="server" ID="LabelSuffixTransactionId" Font-Italic="true" />
         </div>
 
-   
+   AP-84371313H78055230
 
     <asp:Label runat="server" ID="LabelWebFlow" Font-Italic="true" />
-        <asp:HyperLink runat="server" ID="HyperLinkWebFlow" Font-Italic="true" />
+        <asp:HyperLink runat="server" ID="HyperLinkWebFlow" Font-Italic="true"  NavigateUrl="~/csharpDemo/paypalStart2.aspx"/>
+        <br />
+        /csharpDemo/paypalStart2.aspx?payKey=AP-9MY8222772927443P .
+         <asp:HyperLink runat="server" ID="HyperLink1" Font-Italic="true"  NavigateUrl="~/csharpDemo/paypalStart2.aspx?"/>
         <asp:Label runat="server" ID="LabelWebFlowSuffix" Font-Italic="true" />
     </form>
 </body></html>

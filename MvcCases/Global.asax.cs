@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcCases.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,7 @@ namespace MvcCases
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            //GlobalFilters.Filters.Add(new MyRoleFilter());
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

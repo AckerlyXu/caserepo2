@@ -28,5 +28,10 @@ namespace MvcCases.Controllers
         {
             return Json(new { vara,varb}, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult GetPCount()
+        {
+            return View();
+        }
     }
 }

@@ -47,9 +47,9 @@
     <script>
        $.ajax({
             type: "POST",
-           url: "/Services/MyService.asmx/HelloWorld2",
-           //  data: "{ user_id: '" + 1006 + "'}",
-           data: JSON.stringify({ user: { user_id: 1006 } }),
+           url: "/Services/MyService.asmx/HelloWorld",
+         //   data: "{ user_id: '" + 1006 + "'}",
+           data: JSON.stringify( { user_id: 1006 } ),
             contentType: "application/json",
             datatype: "json",
            success: function (data) {

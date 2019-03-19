@@ -8,7 +8,15 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:GridView ID="GridView1" runat="server" OnRowDataBound="GridView1_RowDataBound"></asp:GridView>
+        <asp:GridView ID="GridView1" runat="server" OnRowDataBound="GridView1_RowDataBound" OnRowCommand="GridView1_RowCommand" OnPageIndexChanging="GridView1_PageIndexChanging" AllowPaging="true" PageSize="1" OnSorting="GridView1_Sorting" AllowSorting="true">
+            <Columns>
+               <asp:TemplateField>
+                   <ItemTemplate>
+                       <asp:Button ID="Button2" runat="server" Text="Button" CommandName="Insert" />
+                   </ItemTemplate>
+               </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
           <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
     </form>
   

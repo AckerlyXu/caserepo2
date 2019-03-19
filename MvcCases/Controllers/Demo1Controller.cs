@@ -4,7 +4,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace MvcCases.Controllers
@@ -15,7 +18,15 @@ namespace MvcCases.Controllers
         // GET: Demo1
         public ActionResult Index()
         {
-            return View();
+         
+                using (var sha1 = new SHA1Managed())
+                {
+                    string abc= BitConverter.ToString(sha1.ComputeHash(Encoding.UTF8.GetBytes("12345")));
+                return View((Object)abc);
+            }
+          
+
+           
         }
         public ActionResult PageData(int currentPage=1,int pageSize=10)
         {

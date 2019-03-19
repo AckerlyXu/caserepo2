@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -9,28 +10,37 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void MainThread(string[] args)
+        static void Main(string[] args)
         {
-            ThreadPool.QueueUserWorkItem(
-                (obj) =>
-                {
-                    for (int i = 0; i < 20; i++)
-                    {
-                        Console.WriteLine("I am code in another thread");
-                        Thread.Sleep(500);
-                    }
-                   
-                }
-            );
-            for (int i = 0; i < 20; i++)
+            //ThreadPool.QueueUserWorkItem(
+            //    (obj) =>
+            //    {
+            //        for (int i = 0; i < 20; i++)
+            //        {
+            //            Console.WriteLine("I am code in another thread");
+            //            Thread.Sleep(500);
+            //        }
+
+            //    }
+            //);
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    Console.WriteLine("I am code in main thread");
+            //    Thread.Sleep(500);
+            //}
+            //Console.Read();
+            using (ServiceHost host = new ServiceHost(typeof(Calculator)))
             {
-                Console.WriteLine("I am code in main thread");
-                Thread.Sleep(500);
+                host.Opened += delegate
+                {
+                    Console.WriteLine("opened");
+                };
+                host.Open();
+                Console.Read();
             }
-            Console.Read();
 
         }
-        static async void Main(string[] args)
+        static async void Maina(string[] args)
         {
           Model model =  await getModel();
         }
