@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +12,13 @@ namespace WebFormCases2.JqueryPlugins
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string value =".                                                 --------------------------------------------------                Helllo world               --------------------------------------------------.                                                 xxx                                     EUR 15.60 .                                                 yyy";
+            string[] values = value.Split(new char[] { ' '}, StringSplitOptions.RemoveEmptyEntries);
+            TextBox1.Text = String.Join("",values.Take(5))+  "\r\n" + string.Join(" ", values.Skip(5).Take(4))+"\r\n"+values[9];
+         
+          
+            DataTable table = new DataTable();
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)

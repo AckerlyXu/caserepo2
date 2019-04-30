@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Header>
+    <ServiceContext token="temporary/127.0.0.1-1205239338115-25203285"
+    xmlns="http://context.core.datamodel.fs.documentum.abc.com/">
+      <Identities xsi:type="RepositoryIdentity"
+      userName="*****"
+      password="*****"
+      repositoryName="Test"
+      domain=""
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <RuntimeProperties/>
+    </ServiceContext>
+  </s:Header>
+  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <execute xmlns="http://core.services.fs.documentum.abc.com/">
+      <query xsi:type="q1:PassthroughQuery"
+      queryString="select Emp_id from employee where emp_number ='A-10101-SEC-A'" 
+      xmlns=""
+      xmlns:q1="http://query.core.datamodel.fs.documentum.abc.com/">
+      <q1:repositories>Test</q1:repositories>
+      </query>
+
+      <execution startingIndex="0"
+      maxResultCount="100"
+      maxResultPerSource="50"
+      cacheStrategyType="DEFAULT_CACHE_STRATEGY"
+      xmlns=""/>
+    </execute>
+  </s:Body>
+</s:Envelope>

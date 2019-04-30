@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="MyController">
+        <input ng-model="name" />
+
+        <div my-directive abc="def" on-send="changeName('myname')" my-model="name" my-name="xuqiang"></div>
+        <div link >www.baidu.com</div>
+        <div as-direc></div>
+        <div sidebar title="links">
+
+            <ul>
+                <li>first link</li>
+                <li>second link</li>
+            </ul>
+        </div>
+        <div sidebar title="tagcloud">
+
+             <div>
+                  graphics     angularjs
+
+             </div>
+        </div>
+
+          <div my-scope>
+              
+              <div ng-controller="TheController">{{  myprop }}</div>
+          </div>
+    </div>
+
+    <script>
+        angular.module("myApp", [])
+            .controller("MyController", function ($scope) {
+                $scope.name = "ackerly",
+                    $scope.changeName = function (name) {
+                  
+                    $scope.name = name;
+                 
+                    }
+            })
+            .directive("myDirective", function () {
+                return {
+                    replace: true,
+                    priority:100,
+                    restrict: "A",
+                    scope: {
+                        myModel: "=",
+                        onSend: "&",
+                        myName:'@'
+                    },
+                    controller: function ($scope, $element, $attrs, $transclude) {
+                     //   console.log($scope, $element, $attrs, $transclude);
+                        
+                    },
+                    template: `
+                          <div>  <input type="text" ng-model="myModel" />{{myName}}
+                              <input type="button" value='btn' ng-click="onSend()" /></div>
+                         `
+                }
+            })
+            .directive("sidebar", function () {
+                return {
+                    restrict: "AE",
+                    scope: {
+                        title:"@"
+                    },
+                    transclude: true,
+                    controller: function ($scope, $element, $attrs, $transclude) {
+                       // console.log($scope, $element, $attrs, $transclude);
+
+                    },
+
+                    template: `
+                             <div >
+            <div class="content">
+              <h2>{{title}}</h2>
+                <span class="content" ng-transclude></span>
+</div>
+
+</div>
+
+`
+                }
+            })
+            .directive("link", function () {
+                return {
+                    restrict: "EA",
+                    transclude: true,
+                    controller: function ($scope, $element, $attrs, $transclude) {
+                        $transclude(function (clone) {
+                            console.log(clone);
+                            var a = angular.element("<a>");
+                            a.attr("href", clone.text());
+                            a.text(clone.text());
+                            $element.append(a);
+
+                        })        
+                    },
+                    template: `
+                     <div>我是link</div>
+`
+                  
+                }
+            })
+            .directive("asDirec", function () {
+                return {
+                    restrict: "AE",
+                    controller: function () {
+                        this.name = "hello";
+                    },
+                    controllerAs: "main",
+                    template :`<div> <input  type="text" ng-model="main.name" />{{main.name}}</div>`
+                }
+            })
+            .directive("myScope", function () {
+                return {
+                    restrict: "AE",
+                    scope:true,
+                    controller: function ($scope) {
+                        $scope.myprop = "this is my prop";
+                    }
+                }
+            })
+            .controller("TheController", function () {
+
+            })
+    </script>
+</body>
+</html>

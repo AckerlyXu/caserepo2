@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class About
-    
+
     '''<summary>
     '''Button1 control.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class About
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''FileUpload1 control.
     '''</summary>

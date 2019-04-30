@@ -5,9 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CoreProject.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace CoreProject.Controllers
 {
+   
     public class HomeController : Controller
     {
         public IActionResult Index(MyModel myModel)
@@ -32,6 +34,13 @@ namespace CoreProject.Controllers
             return View();
         }
 
+        [Route("/[controller]/[action]/hello")]
+        public IActionResult Json()
+        {
+            return Json(new { Message = "hi" });
+
+            
+        }
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

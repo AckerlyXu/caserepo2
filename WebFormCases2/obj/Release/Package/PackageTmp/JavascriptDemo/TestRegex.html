@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+</head>
+<body>
+       <input type="text" id="myUserName" />
+    <div id="conDivID" style="width:70px;height:90px;border:1px solid red"></div>
+</body>
+
+
+<script>
+          $(function () {
+
+var userName = document.getElementById("myUserName").value;
+           var regex = new RegExp("^[A-Za-z0-9]+$");
+           if (regex.test(userName)) {
+               $("div.dropdown-menu a").click(function () {
+                   $('#conDivID').append("<span style='color: red'>" + userName + ': </span>');
+                   $('#conDivID').append('</br>');
+                   $("#conDivID").append($(this).find("img").clone(true));
+                   $('#conDivID').append('</br>');
+                   $('#conDivID').append("<span class='timeSpan'>" + timeStamp + '</span>');
+                   $('#conDivID').append('</br>');
+               }) // add this line to end the click event binding
+               }else {
+                 // if your string is beyond one line , please use Back quote ` to wrap your string instead of '
+                    alert(`Please Enter Your Username To Start Chat,Only English Letters
+              And Numbers Allowed Without Spaces Between Them In.`);
+           }
+                  //To use scrolls on the conDivID.
+              document.getElementById("conDivID").scrollTop = 1234;
+           document.getElementById("conDivID").scrollHeight;
+              });
+         // });
+//};
+</script>
+</html>

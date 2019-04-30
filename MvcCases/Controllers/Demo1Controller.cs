@@ -1,4 +1,6 @@
-﻿using MvcCases.Models;
+﻿using Microsoft.Owin.Security;
+using MvcCases.Extensions;
+using MvcCases.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections;
@@ -9,24 +11,39 @@ using System.Text;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
+using System.Web.Mvc.Async;
+using System.Web.Mvc.Filters;
 
 namespace MvcCases.Controllers
 {
+   
     public class Demo1Controller : Controller
     {
         CustomerDb db = new CustomerDb();
         // GET: Demo1
         public ActionResult Index()
         {
-         
+          
+              
                 using (var sha1 = new SHA1Managed())
                 {
                     string abc= BitConverter.ToString(sha1.ComputeHash(Encoding.UTF8.GetBytes("12345")));
+        
+              //  AuthManager.SignOut();
                 return View((Object)abc);
+
             }
           
-
            
+           
+        }
+
+       private IAuthenticationManager AuthManager
+        {
+            get
+            {
+                return HttpContext.GetOwinContext().Authentication;
+            }
         }
         public ActionResult PageData(int currentPage=1,int pageSize=10)
         {

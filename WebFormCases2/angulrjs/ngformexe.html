@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+</head>
+<body ng-app="App">
+         <form name = "myform" novalidate ng-submit="mysubmit()" >
+             <div ng-form="innerform" ng-repeat=" field in fields">
+                 <input name="innerfield" ng-required="field.required" type="text" ng-model="field.value"  />
+                 <span ng-show="innerform.innerfield.$invalid && innerform.innerfield.$dirty"> <span ng-show="innerform.innerfield.$error.required">required</span>
+             </div>
+             <button type="submit" ng-disabled="myform.$invalid"> submit</button>
+         </form>
+</body>
+<script>
+    angular.module("App", []).run(function ($rootScope) {
+        $rootScope.fields = [
+            { value: "ackerly", required: true },
+            { value: 18, required: false },
+            { value:"abc",required:true}
+        ]
+        $rootScope.mysubmit = function () {
+            alert(" submit ")
+        }
+
+    });
+</script>
+</html>

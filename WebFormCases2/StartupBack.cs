@@ -6,7 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Owin;
 using WebFormCases2.Models.Identity;
 
-//[assembly: OwinStartup(typeof(WebFormCases2.StartupBack))]
+[assembly: OwinStartup(typeof(WebFormCases2.StartupBack))]
 
 namespace WebFormCases2
 {

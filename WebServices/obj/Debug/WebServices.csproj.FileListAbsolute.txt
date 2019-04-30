@@ -85,4 +85,3 @@ D:\develop\vsworkspace\WebFormCases2\WebServices\obj\Debug\WebServices.csproj.Co
 D:\develop\vsworkspace\WebFormCases2\WebServices\obj\Debug\WebServices.dll
 D:\develop\vsworkspace\WebFormCases2\WebServices\obj\Debug\WebServices.pdb
 D:\develop\vsworkspace\WebFormCases2\WebServices\bin\AjaxControlToolkit.dll
-D:\develop\vsworkspace\WebFormCases2\WebServices\obj\Debug\WebServices.csprojAssemblyReference.cache

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="MyController">
+    <input ng-model="name" />
+    <h1>Hello {{ name |toUp }}</h1>
+    <h3>age {{ age }}</h3>
+    <h4>count: {{ count}}</h4>
+    <input type="button" value="add" ng-click="add()" />
+
+    <div ng-controller="ChildController">
+        {{ child }}  {{ count }}
+    </div>
+    <input ng-model="expr" />
+    {{ parsedexpr }}
+</body>
+</body>
+
+<script>
+
+   //angular.module('emailParser', [])
+   //     .config(['$interpolateProvider', function ($interpolateProvider) {
+   //         $interpolateProvider.startSymbol('__');
+   //         $interpolateProvider.endSymbol('__')
+   //     }])
+   //     .factory('EmailParser', ['$interpolate', function ($interpolate) {
+   //         return {
+   //             parse: function (text, context) {
+   //                 var template = $interpolate(text);
+   //                 return template(context);
+   //             }}
+   //     }])
+
+    angular.module('myApp.filters', [])
+        .filter('toUp', function () { return function (data) { return data.toUpperCase() }})
+    let app = angular.module("myApp", ['myApp.filters']);
+     app.controller(
+        "MyController",
+         function ($scope, $parse, $interpolate) {
+            $scope.name = "ackerlyx"
+            $scope.count = 0;
+            $scope.add = function () {
+                $scope.count++;
+            }
+
+            $scope.$watch('expr', function (old, newvalue, scope) {
+                if (old) {
+                    let func = $interpolate(old);
+                      $scope.parsedexpr = func($scope)
+                   // $scope.parsedexpr = EmailParser.parse(old, $scope);
+                }
+              
+                //if (newvalue != old) {
+                //    var parsefun = $parse(newvalue);
+                //    $scope.parsedexpr = parsefun(scope);
+                //}
+            })
+         
+        }
+    ).run(
+        function ($rootScope) {
+            $rootScope.name = "world";
+            $rootScope.age = 18;
+
+          
+        }
+    )
+    function ChildController($scope) {
+           $scope.child="call hello"   
+    }
+   
+</script>
+
+</html>

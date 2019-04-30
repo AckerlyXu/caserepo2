@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Script.Serialization;
+using System.Web.Script.Services;
 using System.Web.Services;
 
 namespace WebFormCases2.Services
@@ -52,6 +53,15 @@ namespace WebFormCases2.Services
 
         }
 
+        [WebMethod]
+      
+        public string getLocation(string location)
+        {
+
+            
+            return location ;
+
+        }
 
 
 

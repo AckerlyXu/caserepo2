@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+</head>
+<body  ng-app="myApp">
+        {{ name }}
+          <div my-directive></div>
+<script>
+    angular.module("myApp", [])
+        .run(function ($rootScope) {
+            $rootScope.name = "myname"
+        })
+        .directive("myDirective", function () {
+            return {
+                restrict:"A",
+                replace: true,
+                priority:100,
+                scope: {},
+                template: `
+              <div> this is my scope {{name}}</div>
+`
+            }
+        })
+</script>       
+</body>
+
+</html>

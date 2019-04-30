@@ -1,0 +1,5 @@
+D:\develop\vsworkspace\WebFormCases2\CoreIdentity\obj\Debug\netcoreapp2.0\CoreIdentity.csprojAssemblyReference.cache
+D:\develop\vsworkspace\WebFormCases2\CoreIdentity\obj\Debug\netcoreapp2.0\CoreIdentity.csproj.CoreCompileInputs.cache
+D:\develop\vsworkspace\WebFormCases2\CoreIdentity\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\develop\vsworkspace\WebFormCases2\CoreIdentity\obj\Debug\netcoreapp2.0\CoreIdentity.AssemblyInfoInputs.cache
+D:\develop\vsworkspace\WebFormCases2\CoreIdentity\obj\Debug\netcoreapp2.0\CoreIdentity.AssemblyInfo.cs

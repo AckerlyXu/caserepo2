@@ -1,4 +1,5 @@
-﻿@{
+﻿@model MvcCases.Controllers.Item
+@{
     ViewBag.Title = "About";
 }
 <h2>@ViewBag.Title.</h2>
@@ -8,7 +9,10 @@
 
 
 @*<embed src="@Url.Action("Pdf")#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px" id="ifa"/>*@
-<iframe src="@Url.Action("Pdf")#toolbar=0&navpanes=0&scrollbar=0" title="PDF in an i-Frame" frameborder="0" scrolling="auto" style="width:100%; height:100%;"></iframe>
+@*<iframe src="@Url.Action("Pdf")#toolbar=0&navpanes=0&scrollbar=0" title="PDF in an i-Frame" frameborder="0" scrolling="auto" style="width:100%; height:100%;"></iframe>*@
+
+<a href="@Model.ArchivePath">DownLoad:@Model.ArchivePath</a>
+
 @section scripts{
 
 

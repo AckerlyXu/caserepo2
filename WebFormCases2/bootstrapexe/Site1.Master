@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebFormCases2.bootstrapexe.Site1" %>
+
+<!DOCTYPE html>
+<style>
+        .btn {
+  background-color: #DF554C;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+.div-parent
+{
+width:100%;
+}
+.div-button
+{
+/*float:left;*/
+align-content:center;
+width:100%;
+}
+.div-button button
+{
+width: 100px;
+
+}
+
+    </style>
+
+<html>
+
+	<head runat="server">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+		<title></title>
+        <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+		<link rel="stylesheet" href="assets/css/main.css" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font.css">
+        <link href="css/font-awesome.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="css/morris.css">
+        <link href="css/Style.css" rel="stylesheet">
+        
+        <script src="js/jquery2.0.3.min.js"></script>
+        <script src="js/modernizr.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <script src="https://www.jsdelivr.com/package/npm/screenfull"></script>
+        <script src="~/Scripts/jquery.signalR-2.3.0.min.js"></script>
+        <script src="~/signalr/js"></script>
+
+        <script src="js/raphael-min.js"></script>
+        <script src="js/morris.js"></script>
+        
+	</head>
+    
+	<body class="is-preload">
+
+			<div id="header">
+				<div class="top">
+
+						<div id="logo">
+                            <br />
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<h1><asp:Label ID="lbl1" runat="server" Font-Bold="True" Font-Size="Larger"></asp:Label>
+                                <asp:Label ID="lbl2" runat="server" Font-Bold="True" Font-Size="Larger"></asp:Label></h1>
+							    <p><asp:Label ID="lbl3" runat="server" Font-Size="Large"></asp:Label></p>
+						</div>
+
+						<nav id="nav">
+							<ul>
+								<li><a href="1.aspx#1" id="1-link"><span class="icon fa-clipboard">1</span></a></li>
+								<li><a href="2.aspx#2" id="2-link"><span class="icon fa-users">2</span></a></li>
+								<li><a href="3.aspx#3" id="3-link"><span class="icon fa-archive">3</span></a></li>
+								<li><a href="4.aspx#4" id="4-link"><span class="icon fa-envira">4</span></a></li>
+                                <li><a href="5.aspx#5" id="5-link"><span class="icon fa-product-hunt">5</span></a></li>
+                                <li><a href="6.aspx#6" id="6-link"><span class="icon fa-envelope">Contact us</span></a></li>
+                                <li><a href="7.aspx#7" id="7"><span class="icon fa-legal">7s</span></a></li>
+                               
+							</ul>
+						</nav>
+				    </div>
+
+
+				<div class="bottom">
+					
+						<ul class="icons">
+							<li><a href="https://" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https:///" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href=" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                            <li><a href="" class="icon fa-phone"><span class="label">Telephone</span></a></li>
+						</ul>
+				    </div>
+			    </div>
+		
+
+			<div id="main">
+               
+                <asp:Image ID="Logo" runat="server" ImageUrl="~/" Height="89px" Width="299px" style="display:block;margin-left:auto; margin-right:auto;"/>	
+                <asp:ContentPlaceHolder ID="MainMaster" runat="server"></asp:ContentPlaceHolder>   
+                
+            </div>
+        
+                
+		
+			<div id="footer">
+
+				<ul class="copyright">
+					<li>&copy;.</li>
+				</ul>
+
+			</div>
+
+		
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>

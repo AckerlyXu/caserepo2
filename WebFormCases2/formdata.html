@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+     <form action="default.php" method="post">
+
+      
+     </form>
+
+
+</body>
+<script>
+    window.onload = function () {
+        var currentTime = new Date();
+        currentTime.setMinutes(currentTime.getMinutes() + 1);
+        localStorage.setItem("session timeout", currentTime.getTime());
+         setTimeout(function () {
+            var targetTime = localStorage.getItem("session timeout");
+           var currentTime = new Date();
+           currentTime.setSeconds(currentTime.getSeconds() + 50);
+             var myTime = currentTime.getTime();
+             console.log(targetTime);
+            if (!(parseInt(targetTime) > myTime)) {
+                alert("session will time out");
+            }
+        }, 10*1000)
+    }
+</script>
+</html>

@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -6,11 +7,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
+
 namespace MyWebFormCases.Utils
 {
     public class MyObjectDataSource
     {
-
+       
         //private static string constr = ConfigurationManager.ConnectionStrings["supplyModel"].ConnectionString;
 
         //public List<Fruit> getAll()

@@ -145,3 +145,30 @@ namespace MyWebFormCases.Utils
 		}
 	}
 }
+
+
+
+
+
+                //using (SqlConnection con = new SqlConnection(constr))
+                //{
+
+                
+                //         using (SqlCommand com = new SqlCommand("select * from images", con))
+                //         {
+                    
+                //               con.Open();
+
+
+
+                //            using (SqlDataReader reader = com.ExecuteReader())
+                //            {
+
+                //            }
+                            
+                    
+                  
+
+                //         }
+
+                //}

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+</head>
+<body ng-app="myApp">
+      <input  ng-model="name" my-directive />
+    {{name }}
+</body>
+<script>
+    angular.module("myApp", [])
+        .directive("myDirective", function () {
+            return {
+                restrict: "EA",
+               // replace:true,
+                require: "?ngModel",
+                link: function (scope, ele, attrs, ngModel) {
+                    console.log(scope);
+                    console.log(ngModel);
+                   // ngModel.$setViewValue("this is my name");
+                    ngModel.$render = function () {
+                        console.log(ngModel);
+                        ele.html(ngModel.$viewValue() | 'None');
+                    }
+                },
+              //  template:" <div>hello my   </div>"
+            }
+        })
+</script>
+</html>

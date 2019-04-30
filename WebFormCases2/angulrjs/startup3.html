@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+</head>
+<body ng-app="myApp">
+    <form ng-controller="MyController" name="signup_form" novalidate ng-submit="signupForm()">
+        <label> name<input type="text" required name="name" ng-model="signup.name" ng-minlength=3 ng-maxlength=20 /></label>
+
+        <div  ng-messages="signup_form.name.$error" ng-messages-include="mymessage.html">
+            <!--<span ng-message="required" style="color:red">name is required</span>
+            <span  ng-message="minlength" style="color:red">minlength is three</span>
+            <span ng-message="maxlength" style="color:red">maxlength is 20</span>-->
+        </div>
+
+        <input type="submit" value="提交" />
+    </form>
+
+</body>
+<script>
+  
+        let app = angular.module('myApp', ['ngMessages']);
+        app.controller("MyController", function ($scope) {
+            console.log($scope);
+            $scope.signup = {
+                name: "ackerly"
+            };
+            $scope.signupForm = function () {
+                if ($scope.signup_form.$valid) {
+            signup_form.shouldsubmit = false;
+        } else {
+            signup_form.shouldsubmit = true;
+        }
+
+    }
+})
+
+   </script>
+</html>

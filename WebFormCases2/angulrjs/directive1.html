@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="MyController">
+    {{hello}}
+    <input type="text" ng-model="myUrl" />
+    <div my-directive my-url="myUrl" my-text="{{myUrl}}"></div>
+  
+    <div  ng-init="hello='world'">{{hello}}</div>
+  
+</body>
+<script>
+    angular.module('myApp', [])
+        .directive('myDirective', function () {
+            return {
+                scope: {
+                    myUrl: "=",
+                    myText:"@"
+                },
+                restrict: 'A',
+                replace: true,
+                template: '<div><input  type="text" ng-model="myUrl" /><a href="{{myUrl}}">{{myText}}</a></div>',
+                controller: function ($scope) {
+                    console.log($scope);
+                   // $scope.myUrl = "www.baidu.com";
+                    console.log($scope);
+                }
+            }
+        }).controller("MyController", function ($scope) {
+            $scope.myUrl = "www.google.com";
+        })
+</script>
+</html>

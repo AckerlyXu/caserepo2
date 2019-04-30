@@ -38,7 +38,8 @@
     <NoWarn>
     </NoWarn>
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
     <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -52,12 +53,33 @@
     <NoWarn>
     </NoWarn>
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\ackerlyx\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.2.5\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,6 +87,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -100,10 +123,6 @@
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
-    </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
       <Private>True</Private>
@@ -172,11 +191,13 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="ado.netDemo\ParamizedSql.aspx" />
+    <Content Include="ado.netDemo\TagItAndAdo.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\jquery.tagit.css" />
     <Content Include="Content\Site.css" />
     <Content Include="crystalreportviewers13\ActiveXControls\PrintControl.cab" />
     <Content Include="crystalreportviewers13\ActiveXControls\PrintControl_res_cs.cab" />
@@ -775,12 +796,16 @@
     <Content Include="crystalreportviewers13\crsmarttag.jsp" />
     <Content Include="crystalreportviewers13\preview.jsp" />
     <Content Include="gridviewdemo\IfElse.aspx" />
+    <Content Include="gridviewdemo\PagingAndInvisible.aspx" />
     <Content Include="gridviewdemo\showdatetime.aspx" />
     <Content Include="account\PKILogin.aspx" />
     <Content Include="gridviewdemo\SqlDatatSourceNumericColumnName.aspx" />
     <Content Include="javascriptDemo\MaintainScroll.aspx" />
     <Content Include="javascriptDemo\ScollToTest.aspx" />
+    <Content Include="javascriptDemo\ScrollToConditionally.aspx" />
     <Content Include="LinqDemo\DatatableWithLinq.aspx" />
+    <Content Include="LinqDemo\test.xml" />
+    <Content Include="LinqDemo\TestDoc.aspx" />
     <Content Include="rep.pdf" />
     <Content Include="RuleSet2.ruleset">
       <SubType>Designer</SubType>
@@ -788,11 +813,14 @@
     <Content Include="account\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Scripts\tag-it.js" />
+    <Content Include="xmlDemo\ReadRssFromRemote.aspx" />
     <Content Include="xmlDemo\ReplaceNodeText.aspx" />
     <None Include="Connected Services\Calculator\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
+    <Content Include="csharpdemo\Image.ashx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="JqueryPlugins.aspx" />
     <Content Include="Production\test.aspx" />
@@ -835,6 +863,13 @@
       <DependentUpon>ParamizedSql.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="ado.netDemo\TagItAndAdo.aspx.designer.vb">
+      <DependentUpon>TagItAndAdo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ado.netDemo\TagItAndAdo.aspx.vb">
+      <DependentUpon>TagItAndAdo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="About.aspx.designer.vb">
@@ -856,6 +891,9 @@
     <Compile Include="Contact.aspx.vb">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="csharpdemo\Image.ashx.vb">
+      <DependentUpon>Image.ashx</DependentUpon>
     </Compile>
     <Compile Include="csharpdemo\ListBasic.aspx.designer.vb">
       <DependentUpon>ListBasic.aspx</DependentUpon>
@@ -930,6 +968,13 @@
       <DependentUpon>IfElse.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="gridviewdemo\PagingAndInvisible.aspx.designer.vb">
+      <DependentUpon>PagingAndInvisible.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gridviewdemo\PagingAndInvisible.aspx.vb">
+      <DependentUpon>PagingAndInvisible.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="gridviewdemo\showdatetime.aspx.designer.vb">
       <DependentUpon>showdatetime.aspx</DependentUpon>
     </Compile>
@@ -958,6 +1003,13 @@
       <DependentUpon>ScollToTest.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="javascriptDemo\ScrollToConditionally.aspx.designer.vb">
+      <DependentUpon>ScrollToConditionally.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="javascriptDemo\ScrollToConditionally.aspx.vb">
+      <DependentUpon>ScrollToConditionally.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="JqueryPlugins.aspx.designer.vb">
       <DependentUpon>JqueryPlugins.aspx</DependentUpon>
     </Compile>
@@ -970,6 +1022,13 @@
     </Compile>
     <Compile Include="LinqDemo\DatatableWithLinq.aspx.vb">
       <DependentUpon>DatatableWithLinq.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LinqDemo\TestDoc.aspx.designer.vb">
+      <DependentUpon>TestDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqDemo\TestDoc.aspx.vb">
+      <DependentUpon>TestDoc.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -1026,6 +1085,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.vb">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="xmlDemo\ReadRssFromRemote.aspx.designer.vb">
+      <DependentUpon>ReadRssFromRemote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xmlDemo\ReadRssFromRemote.aspx.vb">
+      <DependentUpon>ReadRssFromRemote.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="xmlDemo\ReplaceNodeText.aspx.designer.vb">
       <DependentUpon>ReplaceNodeText.aspx</DependentUpon>

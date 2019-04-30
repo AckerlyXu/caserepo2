@@ -4,6 +4,7 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
 
+
             Dim dt As DataTable = New DataTable()
             dt.Columns.Add(New DataColumn("id", GetType(Int32)))
             dt.Columns.Add(New DataColumn("SUB1_TH", GetType(Int32)))

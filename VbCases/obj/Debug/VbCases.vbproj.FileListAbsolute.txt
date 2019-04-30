@@ -77,7 +77,6 @@ D:\develop\vsworkspace\WebFormCases2\VbCases\bin\System.Web.Optimization.dll
 D:\develop\vsworkspace\WebFormCases2\VbCases\bin\WebGrease.dll
 D:\develop\vsworkspace\WebFormCases2\VbCases\bin\System.Web.Optimization.xml
 D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Newtonsoft.Json.xml
-D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Antlr3.Runtime.pdb
 D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\develop\vsworkspace\WebFormCases2\VbCases\bin\System.Diagnostics.DiagnosticSource.xml
 D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Microsoft.AspNet.TelemetryCorrelation.xml
@@ -107,3 +106,13 @@ D:\develop\vsworkspace\WebFormCases2\VbCases\bin\CrystalDecisions.ReportAppServe
 D:\develop\vsworkspace\WebFormCases2\VbCases\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\develop\vsworkspace\WebFormCases2\VbCases\bin\stdole.dll
 D:\develop\vsworkspace\WebFormCases2\VbCases\obj\Debug\VbCases.vbprojAssemblyReference.cache
+D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Iesi.Collections.dll
+D:\develop\vsworkspace\WebFormCases2\VbCases\bin\NHibernate.dll
+D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Remotion.Linq.dll
+D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Remotion.Linq.EagerFetching.dll
+D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Antlr3.Runtime.xml
+D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Iesi.Collections.xml
+D:\develop\vsworkspace\WebFormCases2\VbCases\bin\NHibernate.xml
+D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Remotion.Linq.xml
+D:\develop\vsworkspace\WebFormCases2\VbCases\bin\Remotion.Linq.EagerFetching.xml
+D:\develop\vsworkspace\WebFormCases2\VbCases\bin\AjaxControlToolkit.dll

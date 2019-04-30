@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+</head>
+<body ng-app="App">
+        <select ng-model="city" ng-options=" city.name for city in citys "></select>
+    <button ng-click="showModel()"></button>
+</body>
+<script>
+    angular.module("App", []).run(function ($rootScope) {
+        $rootScope.citys = [
+            { name: "北京" },
+            { name: "无锡" },
+            {name:"苏州"}
+        ]
+        $rootScope.showModel = function () {
+            console.log($rootScope.city);
+        }
+    })
+</script>
+</html>

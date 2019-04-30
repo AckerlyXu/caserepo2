@@ -21,12 +21,26 @@ namespace CoreProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AnyOrigin", builder =>
+                {
+                    builder
+                    .AllowAnyOrigin()
+                     .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
+            services.AddRouting();
             services.AddMvc();
+            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseCors("AnyOrigin");
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
@@ -38,7 +52,7 @@ namespace CoreProject
             }
 
             app.UseStaticFiles();
-
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

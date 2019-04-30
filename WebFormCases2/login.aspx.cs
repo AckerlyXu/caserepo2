@@ -10,6 +10,7 @@ using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebFormCases2.Models.Identity;
@@ -20,7 +21,8 @@ namespace WebFormCases2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
+            FormsAuthentication.SetAuthCookie("user", true);
             //AppUser user = UserManager.FindByEmail("ackerly@gmail.com");
             //string id = user.Id;
             //Session["user_id"] = id;
@@ -38,7 +40,7 @@ namespace WebFormCases2
             get
             {
                 IOwinContext content = HttpContext.Current.GetOwinContext();
-
+               
                 return content.GetUserManager<AppUserManager>();
 
             }
@@ -61,11 +63,11 @@ namespace WebFormCases2
 
             if (user != null)
             {
-               ClaimsIdentity ident = UserManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                ClaimsIdentity ident = UserManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
                 AuthManager.SignOut();
                 
                 AuthManager.SignIn(new AuthenticationProperties { IsPersistent = false }, ident);
-             IPrincipal principle=   HttpContext.Current.User;
+               IPrincipal principle=   HttpContext.Current.User;
              IIdentity  identity =  principle.Identity;
               string name =  identity.Name;
              

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+    <div id="mainddl">
+        <div id="topdivselect" style="background-color:#beb1b1;width: 20rem;position: relative;padding-bottom: 0.3rem;">
+            <p>
+                <span style="text-align:left;width:10rem"> Select Category</span>
+                <span style="text-align:right;width:8rem;position: absolute" class="glyphicon glyphicon-arrow-down"></span>
+            </p>
+        </div>
+
+        <div id="bottomdivselect" style="display:none;border-style: groove;width: 20rem">
+
+            <div class="ddlitemvalue">one</div>
+            <div class="ddlitemvalue">two</div>
+            <div class="ddlitemvalue">three</div>
+        </div>
+    </div>
+</body>
+<script>
+    $(".ddlitemvalue").click(function (e) {
+        alert($(this).html())
+
+      
+        $('span:first', "#topdivselect").text($(this).html())
+    })
+</script>
+</html>

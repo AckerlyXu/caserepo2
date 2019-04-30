@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <input id="Text1" type="text"  />
+</body>
+
+     <script>
+         $("#Text1").blur(function () {
+             var value = $(this).val();
+
+             if (value[value.length - 1] == ".") {
+                 value = value + "00";
+             }
+             if (value[0] == ".") {
+                 value = "00" + value;
+             }
+             value = value.replace(".", ":");
+             alert(value);
+         })
+
+     </script>
+</html>

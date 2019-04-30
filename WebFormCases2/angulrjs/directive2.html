@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+    <style>
+         .odd{
+              background:red
+         }
+         .even{
+             background:blue
+         }
+    </style>
+</head>
+<body ng-app="App">
+    <a ng-href="{{url}}"> ng-href</a>
+    <a href="{{url}}"> href</a>
+    <!--<img src="{{imgSrc}}" />
+    <img  ng-src="{{imgSrc}}" />-->
+     <div ng-switch  on="url">
+         <p ng-switch-default> default</p>
+         <p ng-switch-when="http://www.google.com">http://www.google.com</p>
+     </div>
+    <div ng-controller="MyController" >
+        {{name}}  <p ng-bind="name"></p>
+        <div ng-bind-template="{{name}}{{age}}"></div>
+        <ul>
+            <li ng-repeat="item in items" ng-class="{odd:$even,even:$odd}">{{item.name}}</li>
+        </ul>
+        <div ng-show="1===4">1=4</div>
+        <input  type="text" ng-model="model.count" ng-change="change()"/>
+    </div>
+</body>
+<script>
+
+
+    angular.module("App", []).run(function ($rootScope, $timeout) {
+        $timeout(function () {
+            $rootScope.url = "http://www.google.com";
+            $rootScope.imgSrc = "https://www.google.com/images/srpr/logo11w.png";
+        }, 2000)
+    }).controller("MyController", function ($scope, $timeout) {
+        $timeout(function () {
+            $scope.name = "ackerly";
+                $scope.age = 26;
+        }, 2000);
+        $scope.change = function () {
+            console.log($scope.model.count);
+        }
+        $scope.model = {};
+        $scope.items = [
+            { name: "item1" },
+            { name: "item2" },
+            { name: "item3" },
+            { name: "item4" }
+        ]
+    });
+</script>
+</html>

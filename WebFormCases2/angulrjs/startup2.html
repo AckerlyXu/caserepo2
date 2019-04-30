@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+</head>
+<body ng-app="myApp" >
+
+    <form ng-controller="MyController" name="signup_form"  novalidate ng-submit="signupForm()">
+        <label> name<input type="text" required name="name" ng-model="name" ng-minlength="3" ng-maxlength="20" /></label>
+     
+        <div ng-show="signup_form.name.$dirty && signup_form.name.$invalid && signup_form.submitted">
+            <span ng-show="signup_form.name.$error.required" style="color:red">name is required</span>
+            <span ng-show="signup_form.name.$error.minlength" style="color:red">minlength is three</span>
+            <span ng-show="signup_form.name.$error.maxlength" style="color:red">maxlength is 20</span>
+        </div>
+       
+        <input type="submit" value="提交" ng-disabled="signup_form.shouldsubmit" />
+    </form>
+
+    <script>
+        let app = angular.module('myApp', []);
+        app.controller("MyController", function ($scope) {
+            console.log($scope);
+            $scope.name="ab"
+            $scope.signupForm = function () {
+                if ($scope.signup_form.$valid) {
+                    signup_form.shouldsubmit = false;
+                } else {
+                    signup_form.shouldsubmit = true;
+                }
+               
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -34,3 +34,8 @@ D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\EntityFramework.dll
 D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\Newtonsoft.Json.dll
 D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\EntityFramework.xml
 D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\Newtonsoft.Json.xml
+D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\Microsoft.Owin.dll
+D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\Owin.dll
+D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\Microsoft.Owin.xml
+D:\develop\vsworkspace\WebFormCases2\MyTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml

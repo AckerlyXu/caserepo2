@@ -20,6 +20,7 @@
     <img src="images/WingtipToys/boatpaper.png" />
     <asp:Button ID="Button1" runat="server" Text="set session" OnClick="Button1_Click" />
     <asp:Button ID="Button2" runat="server" Text="get session" OnClick="Button2_Click" />
+
     <asp:GridView ID="GridView1" runat="server" OnRowDataBound="GridView1_RowDataBound">
         <Columns>
            
@@ -45,22 +46,35 @@
     <script src="https://fullcalendar.io/releases/fullcalendar/3.9.0/fullcalendar.min.js"></script>
     <script src="https://fullcalendar.io//assets/demo-to-codepen.js"></script>
     <script>
-       $.ajax({
-            type: "POST",
-           url: "/Services/MyService.asmx/HelloWorld",
-         //   data: "{ user_id: '" + 1006 + "'}",
-           data: JSON.stringify( { user_id: 1006 } ),
-            contentType: "application/json",
-            datatype: "json",
-           success: function (data) {
-               console.log(data);
-           },
+       //$.ajax({
+       //     type: "POST",
+       //    url: "/Services/MyService.asmx/HelloWorld",
+       //  //   data: "{ user_id: '" + 1006 + "'}",
+       //    data: JSON.stringify( { user_id: 1006 } ),
+       //     contentType: "application/json",
+       //     datatype: "json",
+       //    success: function (data) {
+       //        console.log(data);
+       //    },
               
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
+       //     error: function (XMLHttpRequest, textStatus, errorThrown) {
                 
-            }
-        });
+       //     }
+       // });
 
+
+        $.ajax({
+                    url: 'http://localhost:54332/home/Json/hello',
+                    type: 'get',
+                    dataType: 'json',
+                    contentType: 'application/json;charset=utf-8',
+                    success: function (data) {
+                        alert('Success: ' + data);
+                    },
+                    error: function (error) {
+                        alert(error.statusText);
+                    }
+                });
 
     //    $(function () {
     //    var eventsArray = [{

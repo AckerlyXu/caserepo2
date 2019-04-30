@@ -22,15 +22,23 @@ namespace WebFormCases2.Models.Identity
             AppIdentityDbContext db = context.Get<AppIdentityDbContext>();
      
             AppUserManager manager = new AppUserManager(new UserStore<AppUser>(db));
-            manager.PasswordValidator = new PasswordValidator
-            {
-                RequiredLength = 3,
-                RequireNonLetterOrDigit = false,
-                RequireDigit = false,
-                RequireLowercase = true,
-                RequireUppercase = false,
+            //manager.PasswordValidator = new PasswordValidator
+            //{
+            //    RequiredLength = 3,
+            //    RequireNonLetterOrDigit = false,
+            //    RequireDigit = false,
+            //    RequireLowercase = true,
+            //    RequireUppercase = false,
+
+            //};
+            manager.PasswordValidator = new AppPasswordValidator() {
+                RequiredLength=6,
+                RequireLowercase=true,
+                RequireDigit =true,
+                RequireUppercase = true
             };
-      
+
+
             return manager;
         }
     }

@@ -105,5 +105,20 @@ namespace WebFormCases2.GridViewDemo
             string[]  abc =GridView1.DataKeyNames;
           
         }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+          
+        }
+
+        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+      
+        }
+
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+           
+        }
     }
 }

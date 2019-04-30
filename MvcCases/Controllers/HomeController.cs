@@ -15,9 +15,13 @@ namespace MvcCases.Controllers
 
         public ActionResult About()
         {
+            Item item = new Item()
+            {
+                ArchivePath = @"\\MyVirtServer\Archives\My Folder"
+            };
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return View(item);
         }
  
         public ActionResult Pdf()
@@ -42,5 +46,10 @@ namespace MvcCases.Controllers
             
             return a;
         }
+    }
+
+    public class Item
+    {
+        public string ArchivePath { get; set; }
     }
 }

@@ -5,8 +5,10 @@ namespace WebFormCases2.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Runtime.Serialization;
 
     [Table("First")]
+
     public partial class First
     {
         public int id { get; set; }

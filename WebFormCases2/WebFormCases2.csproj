@@ -47,11 +47,16 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\ackerlyx\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.2\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -67,6 +72,12 @@
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="MailKit, Version=2.1.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>..\packages\MailKit.2.1.1\lib\net45\MailKit.dll</HintPath>
@@ -103,6 +114,12 @@
     <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.15\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate, Version=5.2.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.2.5\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Mapping.Attributes, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.Mapping.Attributes.5.1.0\lib\net461\NHibernate.Mapping.Attributes.dll</HintPath>
+    </Reference>
     <Reference Include="OpenPop, Version=2.0.6.1120, Culture=neutral, PublicKeyToken=6bdb97f144b7efc8, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenPop.NET.2.0.6.1120\lib\net40\OpenPop.dll</HintPath>
     </Reference>
@@ -124,6 +141,12 @@
       <HintPath>..\..\..\..\downloads\VS-2008-master\PIUControlsX.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -179,10 +202,6 @@
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
     </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
@@ -230,11 +249,50 @@
     <Content Include="AjaxTookKitDemo\ExtraContralPxu.aspx" />
     <Content Include="AjaxToolKitDemo\CascadeDropdownProblemInFireFox.aspx" />
     <Content Include="AjaxToolKitDemo\ServiceCS.asmx" />
+    <Content Include="angulrjs\bower_components\angular-messages\angular-messages.js" />
+    <Content Include="angulrjs\bower_components\angular-messages\angular-messages.min.js" />
+    <Content Include="angulrjs\bower_components\angular-messages\index.js" />
+    <Content Include="angulrjs\bower_components\angular-route\angular-route.js" />
+    <Content Include="angulrjs\bower_components\angular-route\angular-route.min.js" />
+    <Content Include="angulrjs\bower_components\angular-route\index.js" />
+    <Content Include="angulrjs\bower_components\angular\angular-csp.css" />
+    <Content Include="angulrjs\bower_components\angular\angular.js" />
+    <Content Include="angulrjs\bower_components\angular\angular.min.js" />
+    <Content Include="angulrjs\bower_components\angular\index.js" />
+    <Content Include="angulrjs\directive1.html" />
+    <Content Include="angulrjs\directive2.html" />
+    <Content Include="angulrjs\directive3.html" />
+    <Content Include="angulrjs\directive4.html" />
+    <Content Include="angulrjs\directive5.html" />
+    <Content Include="angulrjs\mymessage.html" />
+    <Content Include="angulrjs\MyTemplate.html" />
+    <Content Include="angulrjs\ngformexe.html" />
+    <Content Include="angulrjs\ngselectandngoptionexe.html" />
+    <Content Include="angulrjs\route1.html" />
+    <Content Include="angulrjs\startup1.html" />
+    <Content Include="angulrjs\startup2.html" />
+    <Content Include="angulrjs\startup3.html" />
+    <Content Include="angulrjs\views\home.html" />
+    <Content Include="angulrjs\views\inbox.html" />
     <Content Include="bootstrapexe\BootStrapVertical.aspx" />
+    <Content Include="bootstrapexe\GridviewOpenModelPop.aspx" />
     <Content Include="bootstrapexe\LayOutStart.html" />
+    <Content Include="bootstrapexe\ResponsiveExe.aspx" />
+    <Content Include="bootstrapexe\ShowSideBar.aspx" />
     <Content Include="bootstrapexe\startAModalPopUp.aspx" />
+    <Content Include="bootstrapexe\UpdatePandelAndModal.aspx" />
+    <Content Include="bootstrapexe\WebForm1.aspx" />
+    <Content Include="bootstrapexe\withAjaxtoolkitCalendar.aspx" />
+    <Content Include="Content\jquery.tagit.css" />
+    <Content Include="Content\tagit.ui-zendesk.css" />
+    <Content Include="crossPageDemo\AddWhiteBorderToPicture.aspx" />
+    <Content Include="crossPageDemo\printIframeDemo.aspx" />
+    <Content Include="crossPageDemo\WebForm1.aspx" />
+    <Content Include="csharpdemo2\DateTimeGetAge.aspx" />
     <Content Include="csharpdemo2\DateTimeWithCultureInfo.aspx" />
     <Content Include="csharpdemo2\encryptWebconfig.aspx" />
+    <Content Include="csharpdemo2\TcpClientTest.aspx" />
+    <Content Include="csharpdemo2\TcpserverDemo.aspx" />
     <Content Include="csharpDemo\paypalStart.aspx" />
     <Content Include="csharpDemo\paypalStart2.aspx" />
     <Content Include="csharpDemo\ReadEmailWithImap4.aspx" />
@@ -245,35 +303,85 @@
     <Content Include="csharpDemo\SendEmailSomeTimesFail.aspx" />
     <Content Include="csharpDemo\SendMailUsingIdentityMessageService.aspx" />
     <Content Include="csharpDemo\StringDemo.aspx" />
+    <Content Include="cssDemo\aa.html" />
+    <Content Include="cssDemo\FrozeColumns.html" />
+    <Content Include="cssDemo\NavNotShowWellInMobile.html" />
     <Content Include="dropdownDemo\dropdownwithlargeData.aspx" />
     <Content Include="dropdownDemo\removeDropdownItem.aspx" />
     <Content Include="extraControls\AddCallbackToUpdatePanel.aspx" />
+    <Content Include="extraControls\DatalistInDataList.aspx" />
+    <Content Include="extraControls\DetailsViewNotShowDeleteButton.aspx" />
+    <Content Include="extraControls\RepeatreOnDataBoundDemo.aspx" />
+    <Content Include="extraControls\RequiredValidatorWithFirefox.aspx" />
     <Content Include="extraControls\TreeNodeProblem.aspx" />
+    <Content Include="extraControls\ValidateDateExe.aspx" />
+    <Content Include="GridViewDemo\GridviewButtonFieldNotWork.aspx" />
     <Content Include="GridViewDemo\GridViewSqlAdapter.aspx" />
     <Content Include="GridViewDemo\gridviewTemplateDemo.aspx" />
     <Content Include="GridViewDemo\GridViewWithTimer.aspx" />
+    <Content Include="GridViewDemo\GroupByGridviewExe.aspx" />
+    <Content Include="GridViewDemo\MergeCellsOnlyForTheFirstColumn.aspx" />
+    <Content Include="GridViewDemo\MoveCursor.aspx" />
     <Content Include="GridViewDemo\sqlparameterUpdateCloumnNameIsNumber.aspx" />
+    <Content Include="GridViewDemo\UpdatePrev.aspx" />
+    <Content Include="GridViewDemo\UpdateWithSqlDataSource.aspx" />
+    <Content Include="IdentityExe\test.aspx" />
+    <Content Include="JavascriptDemo\convertString.html" />
+    <Content Include="JavascriptDemo\CopyHtmlTable.html" />
     <Content Include="JavascriptDemo\CopyPasteExe.html" />
+    <Content Include="JavascriptDemo\EncodeDecode.html" />
+    <Content Include="formdata.html" />
     <Content Include="JavascriptDemo\getpAfterDiv.html" />
+    <Content Include="JavascriptDemo\IconProblem.html" />
+    <Content Include="JavascriptDemo\SavePositionDemo.aspx" />
+    <Content Include="JavascriptDemo\StepsWithoutImage.html" />
     <Content Include="JavascriptDemo\TestCommaNumbers.html" />
     <Content Include="JavascriptDemo\TriggerClickEventMannually.aspx" />
     <Content Include="JqueryPlugins\bootstrap-year-calendar.css" />
     <Content Include="JqueryPlugins\bootstrap-year-calendar.js" />
     <Content Include="JqueryPlugins\bootstrapfullcalendar.aspx" />
+    <Content Include="JqueryPlugins\chartjsexe.aspx" />
+    <Content Include="JqueryPlugins\ChartjsExe2.aspx" />
     <Content Include="JqueryPlugins\GoogleMapStart.html" />
+    <Content Include="JqueryPlugins\highlight\css\main.css" />
+    <Content Include="JqueryPlugins\highlight\highlightdynamic.aspx" />
+    <Content Include="JqueryPlugins\highlight\images\1.png" />
+    <Content Include="JqueryPlugins\highlight\images\2.jpg" />
+    <Content Include="JqueryPlugins\highlight\images\online_icon_right%402x.png" />
+    <Content Include="JqueryPlugins\highlight\index.html" />
+    <Content Include="JqueryPlugins\highlight\jquery.maphilight.min.js" />
+    <Content Include="JqueryPlugins\highlight\jquery.min.js" />
+    <Content Include="JqueryPlugins\highlight\scripts\main.js" />
+    <Content Include="JqueryPlugins\highlight\scripts\zoom-image - Copy.js" />
+    <Content Include="JqueryPlugins\highlight\scripts\zoom-image.js" />
     <Content Include="JqueryPlugins\Jqueryfullcalender.aspx" />
+    <Content Include="JqueryPlugins\jquerytabcrud.aspx" />
+    <Content Include="JqueryPlugins\momentjsExe.aspx" />
     <Content Include="JqueryPlugins\pnotify.custom.min.css" />
     <Content Include="JqueryPlugins\pnotify.custom.min.js" />
     <Content Include="JqueryPlugins\PnotifyJsExe.aspx" />
     <Content Include="jsonDemo\desirializeToDataTable.aspx" />
     <Content Include="LinqEntityDemo\DealWithNullMethodVersion.aspx" />
+    <Content Include="LinqEntityDemo\DuplicateModelsProblem.aspx" />
+    <Content Include="LinqEntityDemo\GroupByTest.aspx" />
+    <Content Include="LinqEntityDemo\joinTwoDatatable.aspx" />
     <Content Include="LinqEntityDemo\LinqWithDataTable.aspx" />
+    <Content Include="LinqEntityDemo\NhibernateExe.aspx" />
+    <Content Include="LinqEntityDemo\SelectDistinctValue.aspx" />
     <Content Include="LinqEntityDemo\SumDecimal.aspx" />
     <Content Include="officesample\ExcelisDestoriedProblem.aspx" />
+    <Content Include="officesample\RenderAspxAspdf.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Scripts\tag-it.js" />
     <Content Include="Services\CallRemoteServerWithDownloadStringWebClient.aspx" />
+    <Content Include="sqldbexe\DynamicWhereCaluse.aspx" />
+    <Content Include="sqldbexe\mutileveldata.aspx" />
     <Content Include="sqldbexe\RandowRecordMysql.aspx" />
+    <Content Include="sqldbexe\SqlConnectionProblem.aspx" />
     <Content Include="sqldbexe\SqlDataSourceProgramAddParameter.aspx" />
     <Content Include="sqldbexe\SqlDatasourceWithStoredProcedure.aspx" />
+    <Content Include="sqldbexe\SqlInsertIfNotExists.aspx" />
+    <Content Include="xmlDemo\cache.xml" />
     <Content Include="xmlDemo\dataset.xml" />
     <Content Include="xmlDemo\DatasetWithXml.aspx" />
     <Content Include="xmlDemo\DeserializeXmlDemo.aspx" />
@@ -281,9 +389,35 @@
     <Content Include="xmlDemo\font.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="xmlDemo\GetXmlAttributeDemo.aspx" />
+    <Content Include="xmlDemo\request.xml" />
     <Content Include="xmlDemo\SerializeHtml.aspx" />
+    <Content Include="xmlDemo\ShowXmlInHtml.aspx" />
     <Content Include="xmlDemo\XmlElementMethodDes.aspx" />
+    <Content Include="xmlDemo\XmlSerizlizeDemo.aspx" />
     <Content Include="xmlDemo\XmlWithNamespace.aspx" />
+    <Content Include="xmlDemo\XmlWithNamespace2.aspx" />
+    <Content Include="bootstrapexe\Site1.Master" />
+    <Content Include="angulrjs\bower_components\angular-messages\.bower.json" />
+    <Content Include="angulrjs\bower_components\angular-messages\angular-messages.min.js.map" />
+    <Content Include="angulrjs\bower_components\angular-messages\bower.json" />
+    <Content Include="angulrjs\bower_components\angular-messages\LICENSE.md" />
+    <Content Include="angulrjs\bower_components\angular-messages\package.json" />
+    <Content Include="angulrjs\bower_components\angular-messages\README.md" />
+    <Content Include="angulrjs\bower_components\angular\.bower.json" />
+    <Content Include="angulrjs\bower_components\angular\angular.min.js.gzip" />
+    <Content Include="angulrjs\bower_components\angular\angular.min.js.map" />
+    <Content Include="angulrjs\bower_components\angular\bower.json" />
+    <Content Include="angulrjs\bower_components\angular\LICENSE.md" />
+    <Content Include="angulrjs\bower_components\angular\package.json" />
+    <Content Include="angulrjs\bower_components\angular\README.md" />
+    <Content Include="angulrjs\bower_components\angular-route\.bower.json" />
+    <Content Include="angulrjs\bower_components\angular-route\angular-route.min.js.map" />
+    <Content Include="angulrjs\bower_components\angular-route\bower.json" />
+    <Content Include="angulrjs\bower_components\angular-route\LICENSE.md" />
+    <Content Include="angulrjs\bower_components\angular-route\package.json" />
+    <Content Include="angulrjs\bower_components\angular-route\README.md" />
+    <Content Include="bootstrapexe\Site2.Master" />
     <None Include="Connected Services\ServiceReference1\MyService.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
@@ -428,6 +562,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="csharpdemo2\Web.config" />
+    <Content Include="crossPageDemo\Site1.Master" />
+    <Content Include="crossPageDemo\Site2.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="images\35b98efd413275984b5854789dce5529.gif" />
     <Content Include="images\combine.png" />
@@ -595,12 +732,68 @@
     <Compile Include="bootstrapexe\BootStrapVertical.aspx.designer.cs">
       <DependentUpon>BootStrapVertical.aspx</DependentUpon>
     </Compile>
+    <Compile Include="bootstrapexe\GridviewOpenModelPop.aspx.cs">
+      <DependentUpon>GridviewOpenModelPop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bootstrapexe\GridviewOpenModelPop.aspx.designer.cs">
+      <DependentUpon>GridviewOpenModelPop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bootstrapexe\ResponsiveExe.aspx.cs">
+      <DependentUpon>ResponsiveExe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bootstrapexe\ResponsiveExe.aspx.designer.cs">
+      <DependentUpon>ResponsiveExe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bootstrapexe\ShowSideBar.aspx.cs">
+      <DependentUpon>ShowSideBar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bootstrapexe\ShowSideBar.aspx.designer.cs">
+      <DependentUpon>ShowSideBar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bootstrapexe\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bootstrapexe\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="bootstrapexe\Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bootstrapexe\Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
     <Compile Include="bootstrapexe\startAModalPopUp.aspx.cs">
       <DependentUpon>startAModalPopUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="bootstrapexe\startAModalPopUp.aspx.designer.cs">
       <DependentUpon>startAModalPopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bootstrapexe\UpdatePandelAndModal.aspx.cs">
+      <DependentUpon>UpdatePandelAndModal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bootstrapexe\UpdatePandelAndModal.aspx.designer.cs">
+      <DependentUpon>UpdatePandelAndModal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bootstrapexe\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bootstrapexe\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bootstrapexe\withAjaxtoolkitCalendar.aspx.cs">
+      <DependentUpon>withAjaxtoolkitCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bootstrapexe\withAjaxtoolkitCalendar.aspx.designer.cs">
+      <DependentUpon>withAjaxtoolkitCalendar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\Auth\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -619,6 +812,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="crossPageDemo\AddWhiteBorderToPicture.aspx.cs">
+      <DependentUpon>AddWhiteBorderToPicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crossPageDemo\AddWhiteBorderToPicture.aspx.designer.cs">
+      <DependentUpon>AddWhiteBorderToPicture.aspx</DependentUpon>
+    </Compile>
     <Compile Include="crossPageDemo\FormViewToGridView.aspx.cs">
       <DependentUpon>FormViewToGridView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -633,6 +833,41 @@
     <Compile Include="crossPageDemo\openedGridview.aspx.designer.cs">
       <DependentUpon>openedGridview.aspx</DependentUpon>
     </Compile>
+    <Compile Include="crossPageDemo\printIframeDemo.aspx.cs">
+      <DependentUpon>printIframeDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crossPageDemo\printIframeDemo.aspx.designer.cs">
+      <DependentUpon>printIframeDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crossPageDemo\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crossPageDemo\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crossPageDemo\Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crossPageDemo\Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="crossPageDemo\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crossPageDemo\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpdemo2\DateTimeGetAge.aspx.cs">
+      <DependentUpon>DateTimeGetAge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpdemo2\DateTimeGetAge.aspx.designer.cs">
+      <DependentUpon>DateTimeGetAge.aspx</DependentUpon>
+    </Compile>
     <Compile Include="csharpdemo2\DateTimeWithCultureInfo.aspx.cs">
       <DependentUpon>DateTimeWithCultureInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -646,6 +881,20 @@
     </Compile>
     <Compile Include="csharpdemo2\encryptWebconfig.aspx.designer.cs">
       <DependentUpon>encryptWebconfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpdemo2\TcpClientTest.aspx.cs">
+      <DependentUpon>TcpClientTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpdemo2\TcpClientTest.aspx.designer.cs">
+      <DependentUpon>TcpClientTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="csharpdemo2\TcpserverDemo.aspx.cs">
+      <DependentUpon>TcpserverDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="csharpdemo2\TcpserverDemo.aspx.designer.cs">
+      <DependentUpon>TcpserverDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="csharpDemo\paypalStart.aspx.cs">
       <DependentUpon>paypalStart.aspx</DependentUpon>
@@ -962,6 +1211,20 @@
     <Compile Include="extraControls\ChartStart.aspx.designer.cs">
       <DependentUpon>ChartStart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="extraControls\DatalistInDataList.aspx.cs">
+      <DependentUpon>DatalistInDataList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extraControls\DatalistInDataList.aspx.designer.cs">
+      <DependentUpon>DatalistInDataList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="extraControls\DetailsViewNotShowDeleteButton.aspx.cs">
+      <DependentUpon>DetailsViewNotShowDeleteButton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extraControls\DetailsViewNotShowDeleteButton.aspx.designer.cs">
+      <DependentUpon>DetailsViewNotShowDeleteButton.aspx</DependentUpon>
+    </Compile>
     <Compile Include="extraControls\HideModelPopupInUpdatePanel.aspx.cs">
       <DependentUpon>HideModelPopupInUpdatePanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -976,12 +1239,33 @@
     <Compile Include="extraControls\HoverToShowPopup.aspx.designer.cs">
       <DependentUpon>HoverToShowPopup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="extraControls\RepeatreOnDataBoundDemo.aspx.cs">
+      <DependentUpon>RepeatreOnDataBoundDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extraControls\RepeatreOnDataBoundDemo.aspx.designer.cs">
+      <DependentUpon>RepeatreOnDataBoundDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="extraControls\RequiredValidatorWithFirefox.aspx.cs">
+      <DependentUpon>RequiredValidatorWithFirefox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extraControls\RequiredValidatorWithFirefox.aspx.designer.cs">
+      <DependentUpon>RequiredValidatorWithFirefox.aspx</DependentUpon>
+    </Compile>
     <Compile Include="extraControls\TreeNodeProblem.aspx.cs">
       <DependentUpon>TreeNodeProblem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="extraControls\TreeNodeProblem.aspx.designer.cs">
       <DependentUpon>TreeNodeProblem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="extraControls\ValidateDateExe.aspx.cs">
+      <DependentUpon>ValidateDateExe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="extraControls\ValidateDateExe.aspx.designer.cs">
+      <DependentUpon>ValidateDateExe.aspx</DependentUpon>
     </Compile>
     <Compile Include="extraControls\WebUserControl1.ascx.cs">
       <DependentUpon>WebUserControl1.ascx</DependentUpon>
@@ -1036,6 +1320,13 @@
     <Compile Include="GridViewDemo\DynamicAddRow.aspx.designer.cs">
       <DependentUpon>DynamicAddRow.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GridViewDemo\GridviewButtonFieldNotWork.aspx.cs">
+      <DependentUpon>GridviewButtonFieldNotWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\GridviewButtonFieldNotWork.aspx.designer.cs">
+      <DependentUpon>GridviewButtonFieldNotWork.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GridViewDemo\GridViewSqlAdapter.aspx.cs">
       <DependentUpon>GridViewSqlAdapter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1056,6 +1347,27 @@
     </Compile>
     <Compile Include="GridViewDemo\GridViewWithTimer.aspx.designer.cs">
       <DependentUpon>GridViewWithTimer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewDemo\GroupByGridviewExe.aspx.cs">
+      <DependentUpon>GroupByGridviewExe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\GroupByGridviewExe.aspx.designer.cs">
+      <DependentUpon>GroupByGridviewExe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewDemo\MergeCellsOnlyForTheFirstColumn.aspx.cs">
+      <DependentUpon>MergeCellsOnlyForTheFirstColumn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\MergeCellsOnlyForTheFirstColumn.aspx.designer.cs">
+      <DependentUpon>MergeCellsOnlyForTheFirstColumn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewDemo\MoveCursor.aspx.cs">
+      <DependentUpon>MoveCursor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\MoveCursor.aspx.designer.cs">
+      <DependentUpon>MoveCursor.aspx</DependentUpon>
     </Compile>
     <Compile Include="GridViewDemo\OneToMany\EmployWithDepart.aspx.cs">
       <DependentUpon>EmployWithDepart.aspx</DependentUpon>
@@ -1092,6 +1404,20 @@
     <Compile Include="GridViewDemo\sqlparameterUpdateCloumnNameIsNumber.aspx.designer.cs">
       <DependentUpon>sqlparameterUpdateCloumnNameIsNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GridViewDemo\UpdatePrev.aspx.cs">
+      <DependentUpon>UpdatePrev.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\UpdatePrev.aspx.designer.cs">
+      <DependentUpon>UpdatePrev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewDemo\UpdateWithSqlDataSource.aspx.cs">
+      <DependentUpon>UpdateWithSqlDataSource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewDemo\UpdateWithSqlDataSource.aspx.designer.cs">
+      <DependentUpon>UpdateWithSqlDataSource.aspx</DependentUpon>
+    </Compile>
     <Compile Include="IdentityExe\ShowUsersUsingUserManager.aspx.cs">
       <DependentUpon>ShowUsersUsingUserManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1099,12 +1425,26 @@
     <Compile Include="IdentityExe\ShowUsersUsingUserManager.aspx.designer.cs">
       <DependentUpon>ShowUsersUsingUserManager.aspx</DependentUpon>
     </Compile>
+    <Compile Include="IdentityExe\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IdentityExe\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InsertOneToMany\DepartAndEmp.aspx.cs">
       <DependentUpon>DepartAndEmp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InsertOneToMany\DepartAndEmp.aspx.designer.cs">
       <DependentUpon>DepartAndEmp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JavascriptDemo\SavePositionDemo.aspx.cs">
+      <DependentUpon>SavePositionDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JavascriptDemo\SavePositionDemo.aspx.designer.cs">
+      <DependentUpon>SavePositionDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="JavascriptDemo\TriggerClickEventMannually.aspx.cs">
       <DependentUpon>TriggerClickEventMannually.aspx</DependentUpon>
@@ -1120,12 +1460,33 @@
     <Compile Include="JqueryPlugins\bootstrapfullcalendar.aspx.designer.cs">
       <DependentUpon>bootstrapfullcalendar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="JqueryPlugins\chartjsexe.aspx.cs">
+      <DependentUpon>chartjsexe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryPlugins\chartjsexe.aspx.designer.cs">
+      <DependentUpon>chartjsexe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JqueryPlugins\ChartjsExe2.aspx.cs">
+      <DependentUpon>ChartjsExe2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryPlugins\ChartjsExe2.aspx.designer.cs">
+      <DependentUpon>ChartjsExe2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="JqueryPlugins\googleAnalysis.aspx.cs">
       <DependentUpon>googleAnalysis.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="JqueryPlugins\googleAnalysis.aspx.designer.cs">
       <DependentUpon>googleAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JqueryPlugins\highlight\highlightdynamic.aspx.cs">
+      <DependentUpon>highlightdynamic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryPlugins\highlight\highlightdynamic.aspx.designer.cs">
+      <DependentUpon>highlightdynamic.aspx</DependentUpon>
     </Compile>
     <Compile Include="JqueryPlugins\JqueryAutocompleteExe.aspx.cs">
       <DependentUpon>JqueryAutocompleteExe.aspx</DependentUpon>
@@ -1147,6 +1508,20 @@
     </Compile>
     <Compile Include="JqueryPlugins\Jqueryfullcalender.aspx.designer.cs">
       <DependentUpon>Jqueryfullcalender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JqueryPlugins\jquerytabcrud.aspx.cs">
+      <DependentUpon>jquerytabcrud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryPlugins\jquerytabcrud.aspx.designer.cs">
+      <DependentUpon>jquerytabcrud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JqueryPlugins\momentjsExe.aspx.cs">
+      <DependentUpon>momentjsExe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JqueryPlugins\momentjsExe.aspx.designer.cs">
+      <DependentUpon>momentjsExe.aspx</DependentUpon>
     </Compile>
     <Compile Include="JqueryPlugins\PnotifyJsExe.aspx.cs">
       <DependentUpon>PnotifyJsExe.aspx</DependentUpon>
@@ -1197,6 +1572,27 @@
     <Compile Include="LinqEntityDemo\DealWithNullMethodVersion.aspx.designer.cs">
       <DependentUpon>DealWithNullMethodVersion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LinqEntityDemo\DuplicateModelsProblem.aspx.cs">
+      <DependentUpon>DuplicateModelsProblem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqEntityDemo\DuplicateModelsProblem.aspx.designer.cs">
+      <DependentUpon>DuplicateModelsProblem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqEntityDemo\GroupByTest.aspx.cs">
+      <DependentUpon>GroupByTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqEntityDemo\GroupByTest.aspx.designer.cs">
+      <DependentUpon>GroupByTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqEntityDemo\joinTwoDatatable.aspx.cs">
+      <DependentUpon>joinTwoDatatable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqEntityDemo\joinTwoDatatable.aspx.designer.cs">
+      <DependentUpon>joinTwoDatatable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LinqEntityDemo\LinqWithDataTable.aspx.cs">
       <DependentUpon>LinqWithDataTable.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1204,12 +1600,26 @@
     <Compile Include="LinqEntityDemo\LinqWithDataTable.aspx.designer.cs">
       <DependentUpon>LinqWithDataTable.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LinqEntityDemo\NhibernateExe.aspx.cs">
+      <DependentUpon>NhibernateExe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqEntityDemo\NhibernateExe.aspx.designer.cs">
+      <DependentUpon>NhibernateExe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LinqEntityDemo\ParallelForEachStart.aspx.cs">
       <DependentUpon>ParallelForEachStart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LinqEntityDemo\ParallelForEachStart.aspx.designer.cs">
       <DependentUpon>ParallelForEachStart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqEntityDemo\SelectDistinctValue.aspx.cs">
+      <DependentUpon>SelectDistinctValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqEntityDemo\SelectDistinctValue.aspx.designer.cs">
+      <DependentUpon>SelectDistinctValue.aspx</DependentUpon>
     </Compile>
     <Compile Include="LinqEntityDemo\SumDecimal.aspx.cs">
       <DependentUpon>SumDecimal.aspx</DependentUpon>
@@ -1246,6 +1656,7 @@
     <Compile Include="Models\Entity1.cs" />
     <Compile Include="Models\First.cs" />
     <Compile Include="Models\Identity\AppIdentityDbContext.cs" />
+    <Compile Include="Models\Identity\AppPasswordValidator.cs" />
     <Compile Include="Models\Identity\AppRole.cs" />
     <Compile Include="Models\Identity\AppRoleManager.cs" />
     <Compile Include="Models\Identity\AppUser.cs" />
@@ -1288,6 +1699,13 @@
     <Compile Include="officesample\readcsvdemo.aspx.designer.cs">
       <DependentUpon>readcsvdemo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="officesample\RenderAspxAspdf.aspx.cs">
+      <DependentUpon>RenderAspxAspdf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officesample\RenderAspxAspdf.aspx.designer.cs">
+      <DependentUpon>RenderAspxAspdf.aspx</DependentUpon>
+    </Compile>
     <Compile Include="officesample\ShowxlsxInBrowser.aspx.cs">
       <DependentUpon>ShowxlsxInBrowser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1309,7 +1727,15 @@
     <Compile Include="officesample\WritePdfToClient.aspx.designer.cs">
       <DependentUpon>WritePdfToClient.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PhpModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Services\AdoSpressTest.asmx.cs">
       <DependentUpon>AdoSpressTest.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -1370,12 +1796,34 @@
     <Compile Include="sqldbexe\DatetimeconvertionInLinqToEntity.aspx.designer.cs">
       <DependentUpon>DatetimeconvertionInLinqToEntity.aspx</DependentUpon>
     </Compile>
+    <Compile Include="sqldbexe\DbHelper.cs" />
+    <Compile Include="sqldbexe\DynamicWhereCaluse.aspx.cs">
+      <DependentUpon>DynamicWhereCaluse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sqldbexe\DynamicWhereCaluse.aspx.designer.cs">
+      <DependentUpon>DynamicWhereCaluse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sqldbexe\mutileveldata.aspx.cs">
+      <DependentUpon>mutileveldata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sqldbexe\mutileveldata.aspx.designer.cs">
+      <DependentUpon>mutileveldata.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sqldbexe\RandowRecordMysql.aspx.cs">
       <DependentUpon>RandowRecordMysql.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="sqldbexe\RandowRecordMysql.aspx.designer.cs">
       <DependentUpon>RandowRecordMysql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sqldbexe\SqlConnectionProblem.aspx.cs">
+      <DependentUpon>SqlConnectionProblem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sqldbexe\SqlConnectionProblem.aspx.designer.cs">
+      <DependentUpon>SqlConnectionProblem.aspx</DependentUpon>
     </Compile>
     <Compile Include="sqldbexe\SqlDataSourceProgramAddParameter.aspx.cs">
       <DependentUpon>SqlDataSourceProgramAddParameter.aspx</DependentUpon>
@@ -1391,6 +1839,13 @@
     <Compile Include="sqldbexe\SqlDatasourceWithStoredProcedure.aspx.designer.cs">
       <DependentUpon>SqlDatasourceWithStoredProcedure.aspx</DependentUpon>
     </Compile>
+    <Compile Include="sqldbexe\SqlInsertIfNotExists.aspx.cs">
+      <DependentUpon>SqlInsertIfNotExists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sqldbexe\SqlInsertIfNotExists.aspx.designer.cs">
+      <DependentUpon>SqlInsertIfNotExists.aspx</DependentUpon>
+    </Compile>
     <Compile Include="sqldbexe\SqlServerIsolation.aspx.cs">
       <DependentUpon>SqlServerIsolation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1403,6 +1858,7 @@
     <Compile Include="Utils\EncryptDecryptUtil.cs" />
     <Compile Include="Utils\ImageUtil.cs" />
     <Compile Include="Utils\MyObjectDataSource.cs" />
+    <Compile Include="Utils\MySessionIdManager.cs" />
     <Compile Include="Utils\MySqlUtil.cs" />
     <Compile Include="Utils\SqlHelper.cs" />
     <Compile Include="ViewStateDemo\second.aspx.cs">
@@ -1454,6 +1910,13 @@
     <Compile Include="xmlDemo\generateXsltConditionally.aspx.designer.cs">
       <DependentUpon>generateXsltConditionally.aspx</DependentUpon>
     </Compile>
+    <Compile Include="xmlDemo\GetXmlAttributeDemo.aspx.cs">
+      <DependentUpon>GetXmlAttributeDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xmlDemo\GetXmlAttributeDemo.aspx.designer.cs">
+      <DependentUpon>GetXmlAttributeDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="xmlDemo\IArchiveDescription.cs" />
     <Compile Include="xmlDemo\SerializeHtml.aspx.cs">
       <DependentUpon>SerializeHtml.aspx</DependentUpon>
@@ -1461,6 +1924,13 @@
     </Compile>
     <Compile Include="xmlDemo\SerializeHtml.aspx.designer.cs">
       <DependentUpon>SerializeHtml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xmlDemo\ShowXmlInHtml.aspx.cs">
+      <DependentUpon>ShowXmlInHtml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xmlDemo\ShowXmlInHtml.aspx.designer.cs">
+      <DependentUpon>ShowXmlInHtml.aspx</DependentUpon>
     </Compile>
     <Compile Include="xmlDemo\TestXmlSerialize.aspx.cs">
       <DependentUpon>TestXmlSerialize.aspx</DependentUpon>
@@ -1476,12 +1946,26 @@
     <Compile Include="xmlDemo\XmlElementMethodDes.aspx.designer.cs">
       <DependentUpon>XmlElementMethodDes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="xmlDemo\XmlSerizlizeDemo.aspx.cs">
+      <DependentUpon>XmlSerizlizeDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xmlDemo\XmlSerizlizeDemo.aspx.designer.cs">
+      <DependentUpon>XmlSerizlizeDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="xmlDemo\XmlWithNamespace.aspx.cs">
       <DependentUpon>XmlWithNamespace.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="xmlDemo\XmlWithNamespace.aspx.designer.cs">
       <DependentUpon>XmlWithNamespace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xmlDemo\XmlWithNamespace2.aspx.cs">
+      <DependentUpon>XmlWithNamespace2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xmlDemo\XmlWithNamespace2.aspx.designer.cs">
+      <DependentUpon>XmlWithNamespace2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

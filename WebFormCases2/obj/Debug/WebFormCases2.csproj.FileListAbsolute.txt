@@ -20,7 +20,6 @@ D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\roslyn\Microsoft.DiaSymRe
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\roslyn\Microsoft.VisualBasic.Core.targets
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\roslyn\Microsoft.Win32.Primitives.dll
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\roslyn\System.AppContext.dll
-D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\roslyn\System.Collections.Immutable.dll
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\roslyn\System.Console.dll
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\roslyn\System.Diagnostics.Process.dll
@@ -115,7 +114,6 @@ D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\System.Net.Imap4.pdb
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\System.Net.Imap4.xml
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\System.Web.Optimization.xml
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Newtonsoft.Json.xml
-D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Antlr3.Runtime.pdb
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\System.Diagnostics.DiagnosticSource.xml
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Microsoft.AspNet.TelemetryCorrelation.xml
@@ -131,4 +129,18 @@ D:\develop\vsworkspace\WebFormCases2\WebFormCases2\obj\Debug\WebFormCases2.cspro
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\obj\Debug\WebFormCases2.csproj.CopyComplete
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\obj\Debug\WebFormCases2.dll
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\obj\Debug\WebFormCases2.pdb
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\itextsharp.dll
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\itextsharp.xml
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Iesi.Collections.dll
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\NHibernate.dll
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Remotion.Linq.dll
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Remotion.Linq.EagerFetching.dll
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Antlr3.Runtime.xml
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Iesi.Collections.xml
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\NHibernate.xml
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Remotion.Linq.xml
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\Remotion.Linq.EagerFetching.xml
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\NHibernate.Mapping.Attributes.dll
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\NHibernate.Mapping.Attributes.xml
+D:\develop\vsworkspace\WebFormCases2\WebFormCases2\bin\roslyn\System.Collections.Immutable.dll
 D:\develop\vsworkspace\WebFormCases2\WebFormCases2\obj\Debug\WebFormCases2.csprojAssemblyReference.cache

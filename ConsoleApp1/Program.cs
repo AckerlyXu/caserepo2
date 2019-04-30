@@ -1,6 +1,13 @@
-﻿using System;
+﻿using Microsoft.CSharp;
+using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Security.AccessControl;
+using System.Security.Principal;
 using System.ServiceModel;
 using System.Text;
 using System.Threading;
@@ -12,33 +19,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //ThreadPool.QueueUserWorkItem(
-            //    (obj) =>
-            //    {
-            //        for (int i = 0; i < 20; i++)
-            //        {
-            //            Console.WriteLine("I am code in another thread");
-            //            Thread.Sleep(500);
-            //        }
 
-            //    }
-            //);
-            //for (int i = 0; i < 20; i++)
-            //{
-            //    Console.WriteLine("I am code in main thread");
-            //    Thread.Sleep(500);
-            //}
-            //Console.Read();
-            using (ServiceHost host = new ServiceHost(typeof(Calculator)))
-            {
-                host.Opened += delegate
-                {
-                    Console.WriteLine("opened");
-                };
-                host.Open();
-                Console.Read();
-            }
 
+
+
+         
         }
         static async void Maina(string[] args)
         {

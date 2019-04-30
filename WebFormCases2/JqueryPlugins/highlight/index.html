@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Product Gallery With Image Zoom Example</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <style>
+
+        body {
+            background-color: #fafafa;
+            min-height: 100vh;
+        }
+
+        .container {
+            margin: 150px auto;
+           width:500px;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+
+    <script src="jquery.maphilight.min.js"></script>
+  
+    <script type="text/javascript">
+        $(function () {
+            $(".map").maphilight()
+            $(".icon-right,.icon-left,#small-img-roll img").click(
+                function () {
+                    $("div.map img").css("opacity", 1);
+                    $(".map").maphilight()
+                }
+
+
+            )
+
+        })
+
+         
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Gallery With Image Zoom Example</h1>
+
+        <div class="small-img">
+            <img src="images/online_icon_right@2x.png" class="icon-left" alt="" id="prev-img">
+            <div class="small-container">
+                <div id="small-img-roll">
+
+
+                    <img src="images/1.png" class="show-small-img" alt="">
+                    <img src="images/2.jpg" class="show-small-img" alt="">
+                </div>
+            </div>
+
+
+
+            <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>-->
+
+
+            <img src="images/online_icon_right@2x.png" class="icon-right" alt="" id="next-img">
+        </div>
+        <!--<div class="show" href="images/1.png" usemap="#enewspaper">-->
+        <img src="images/1.png" id="show-img" usemap="#enewspaper" class="map">
+        <map name="enewspaper">
+            <area shape="rect" coords="0,112,119,453" />
+            <area shape="rect" coords="119,235,410,453" />
+            <area shape="rect" coords="411,232,490,453" />
+            <area shape="rect" coords="122,112,490,230" />
+        </map>
+
+        <map name="enewspaper1">
+            <area shape="rect" alt="" title="" coords="34,136,562,221"  />
+
+        </map>
+    </div>
+  
+</div>
+<script src="scripts/zoom-image.js"></script>
+  <script src="scripts/main.js"></script>
+
+ 
+</body>
+
+
+</html>

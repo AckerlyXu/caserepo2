@@ -18,6 +18,13 @@ namespace WebFormCases2
             BundleConfig.RegisterBundles(BundleTable.Bundles);
          
         }
+
+        void Application_BeginRequest(object sender, EventArgs e)
+        {
+
+                 
+ HttpRequest request =    HttpContext.Current.Request;
+        }
        
     }
 }

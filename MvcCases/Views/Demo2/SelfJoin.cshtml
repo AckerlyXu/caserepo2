@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MvcCases.Controllers.MyViewModel>
+
+@{
+    ViewBag.Title = "SelfJoin";
+}
+
+<h2>SelfJoin</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AbinId_Pk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AViewTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BViewTitle)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AbinId_Pk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AViewTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BViewTitle)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

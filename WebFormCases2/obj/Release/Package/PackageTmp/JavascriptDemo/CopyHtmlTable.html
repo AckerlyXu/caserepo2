@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-1.9.1.js"></script>
+</head>
+<body>
+    <table id="example">
+       <thead>
+           <tr>
+               <th>
+                   col1
+               </th>
+               <th>
+                   col2
+               </th>
+               <th>
+                   col3
+               </th>
+           </tr>
+       </thead>
+        <tbody>
+            <tr>
+                <td>tr1 td1 &nbsp; &nbsp;    </td>
+                <td>tr1 td2    &nbsp;  &nbsp;  </td>
+                <td>tr1 td3 &nbsp;  &nbsp; </td>
+            </tr>
+
+            <tr>
+                <td>tr2 td1 &nbsp;  &nbsp; </td>
+                <td>tr2 td2 &nbsp;  &nbsp; </td>
+                <td>tr2 td3 &nbsp;  &nbsp; </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <input  type="button" id="refresh" value="refresh"/>
+    <div id="content">
+
+    </div>
+
+
+</body>
+
+<script>
+
+    $('#refresh').click(function () {
+     
+        var content1 = "<table border='1'>";
+
+
+        content1 += "<thead>"
+        content1 += "<tr>"
+        for (var i = 0; i < $("#example thead th").length; i++) {
+          
+            
+                f = $("#example thead th:eq(" + i+ ")").text()
+
+
+                content1 += '<th class="table_content_style">' + f + ' </th>'
+           
+
+        }
+
+        content1 += "</tr>"
+        content1 += "</thead>"
+          content1+="<tbody>"
+        for (var i = 0; i < $("#example tbody tr").length; i++) {
+            content1+="<tr>"
+            for (var j = 0; j < $("#example tbody tr:eq("+i+") td").length; j++) {
+                f = $("#example tbody tr:eq('" + i + "') td:eq('" + j + "')").text()
+
+             
+                content1 += '<td class="table_content_style">' + f + ' </td>'
+            }
+            content1+="</tr>"
+
+        }
+        content1 += "</tbody>";
+        content1 += "</table><br/>";
+
+  
+        $('#content').append(content1);
+
+    });
+
+</script>
+</html>

@@ -13,7 +13,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:GridView ID="GridView1" DataKeyNames="InfoId" runat="server" OnRowDataBound="GridView1_RowDataBound" AutoGenerateSelectButton="true" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <asp:GridView ID="GridView1" DataKeyNames="InfoId" runat="server" OnRowDataBound="GridView1_RowDataBound" AutoGenerateSelectButton="true"  OnRowEditing ="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating"  OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnPageIndexChanging="GridView1_PageIndexChanging" OnPageIndexChanged="GridView1_PageIndexChanged">
             <Columns>
                 <asp:TemplateField>
                     <ItemTemplate>
